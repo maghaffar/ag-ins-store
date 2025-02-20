@@ -3862,3 +3862,30 @@ details-disclosure > details {
   color: white;
   max-width: 750px;
 }
+.footer-main {
+  display: flex;
+  gap: 20px;
+}
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 140px;
+}
+.footer-list {
+  list-style: none;
+}
+.footer-menu-title {
+  font-family: "Oxygen";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22.73px;
+  color: #9a9a9a;
+}
+.footer-menu-text {
+  font-family: "Oxygen";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22.73px;
+  color: white;
+}
