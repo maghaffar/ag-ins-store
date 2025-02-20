@@ -1,21 +1,21 @@
-<div class="container">
-<h1 class="section-heading align-{{ section.settings.text-alignment }}">{{ section.settings.heading }}</h1>
-<div class="suggested-articles">
+<div class="container suggested-posts">
+  <h1 class="section-heading align-{{ section.settings.text-alignment }}">{{ section.settings.heading }}</h1>
+  <div class="suggested-articles">
     {% for block in section.blocks %}
-        {% if block.type == "suggested_post" %}
-            {% assign article = block.settings.suggested-article %}
-            <div class="suggested-article">
-                <img class="article-image" src="{{ article | image_url: width: 400 }}">
-                <div class="author">
-                    <p>{{ article.author }}</p>
-                    {{ 'dot.svg' | inline_asset_content }}
-                    <p>{{ article.published_at | date: '%d %B %Y'  }}</p>
-                </div>
-                <p class="article-title">{{ article.title }}</p>
-            </div>
-        {% endif %}
+      {% if block.type == 'suggested_post' %}
+        {% assign article = block.settings['suggested-article'] %}
+        <div class="suggested-article">
+          <img class="article-image" src="{{ article | image_url: width: 400 }}">
+          <div class="author">
+            <p>{{ article.author }}</p>
+            {{ 'dot.svg' | inline_asset_content }}
+            <p>{{ article.published_at | date: '%d %B %Y' }}</p>
+          </div>
+          <p class="article-title">{{ article.title }}</p>
+        </div>
+      {% endif %}
     {% endfor %}
-</div>
+  </div>
 </div>
 {% schema %}
 {
