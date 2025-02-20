@@ -3848,3 +3848,16 @@ details-disclosure > details {
   display: flex;
   justify-content: space-evenly;
 }
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.newsletter-text {
+  font-family: "Oxygen";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 50.51px;
+
+  text-align: center;
+}
