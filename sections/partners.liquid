@@ -3,7 +3,9 @@
     background-color: {{section.settings.background-color}}
   }
 </style>
-<div class="container partners"></div>
+<div class="container partners">
+  {{ section.settings['partner-logo'] | image_url: width: 140 | image_tag }}
+</div>
 {% schema %}
 {
   "name": "Partners",
@@ -13,6 +15,11 @@
       "id": "background-color",
       "label": "Background Color",
       "default":"#666666"
+    },
+    {
+      "type": "image_picker",
+      "id": "partner-logo",
+      "label": "Partner Logo"
     }
   ]
 }
