@@ -1,3 +1,8 @@
+<style>
+  .footer{
+    background-color: {{section.settings.background-color}}
+  }
+</style>
 <div class="footer">
   <div class="newsletter">
     {% if section.settings.footer_logo != blank %}
@@ -20,7 +25,13 @@
       "id": "newsletter_text",
       "label": "Newsletter Text",
       "default": "Subscribe To Your Newsletter to Stay Updated About Discounts"
-    }
+    },
+     {
+      "type": "color",
+      "id": "background-color",
+      "label": "Background Color",
+      "default":"#666666"
+    },
 ],
   "presets": [
     {
