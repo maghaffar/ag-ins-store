@@ -3796,6 +3796,7 @@ details-disclosure > details {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 100px;
 }
 .product-title {
   font-family: "Oxygen";
@@ -3826,6 +3827,9 @@ details-disclosure > details {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+.suggested-posts {
+  margin-top: 100px;
 }
 .suggested-articles {
   display: flex;
