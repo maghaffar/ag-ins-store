@@ -3839,8 +3839,11 @@ details-disclosure > details {
 .suggested-article {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+
   width: 31%;
+}
+.article-title {
+  margin: 0;
 }
 .partners {
   margin-top: 100px;
