@@ -176,6 +176,12 @@
           "settings": {
             "partner_logo": "shopify://shop_images/yahoo-news-img_2.png"
           }
+        },
+        "partner_logo_Vk9W4R": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/shefinds-logo_1.png"
+          }
         }
       },
       "block_order": [
@@ -184,7 +190,8 @@
         "partner_logo_Nr8ppy",
         "partner_logo_cHpdQL",
         "partner_logo_aHWxGV",
-        "partner_logo_bUikBU"
+        "partner_logo_bUikBU",
+        "partner_logo_Vk9W4R"
       ],
       "settings": {
         "background-color": "#666666"
