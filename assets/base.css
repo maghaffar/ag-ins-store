@@ -3866,6 +3866,7 @@ details-disclosure > details {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  margin-top: 50px;
 }
 .footer-menu {
   display: flex;
@@ -3876,6 +3877,9 @@ details-disclosure > details {
 .footer-list {
   list-style: none;
   padding: 0;
+}
+.footer-list li {
+  margin-bottom: 5px;
 }
 .footer-menu-title {
   font-family: "Oxygen";
