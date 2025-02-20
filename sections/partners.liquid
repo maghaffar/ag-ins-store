@@ -4,7 +4,7 @@
   }
 </style>
 <div class="container partners">
-  {{ section.settings['partner-logo'] | image_url: width: 140 | image_tag }}
+  {{ section.settings.partner_logo | image_url: width: 140 | image_tag }}
 </div>
 {% schema %}
 {
@@ -18,7 +18,7 @@
     },
     {
       "type": "image_picker",
-      "id": "partner-logo",
+      "id": "partner_logo",
       "label": "Partner Logo"
     }
   ],
