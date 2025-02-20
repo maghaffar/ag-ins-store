@@ -4,7 +4,9 @@
   }
 </style>
 <div class="container partners">
-  {{ section.settings.partner_logo | image_url: width: 140 | image_tag }}
+  {% if section.settings.partner_logo != blank %}
+    {{ section.settings.partner_logo | image_url: width: 140 | image_tag }}
+  {% endif %}
 </div>
 {% schema %}
 {
