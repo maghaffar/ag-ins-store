@@ -1,0 +1,105 @@
+<div>
+  This is My Test Section
+  <p style="font-size:{{ section.settings.range}}">{{ section.settings.menu }}</p>
+  {% form 'activate_customer_password' %}{% endform %}
+</div>
+{% schema %}
+  {
+    "name": "TestSection",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Test Title"
+},
+      {
+        "type": "number",
+        "id": "number",
+        "label": "Number",
+        "placeholder": "This is a NUMBER"
+      },
+      {
+        "type": "radio",
+        "id": "radio",
+        "label": "Radio",
+        "options": [
+          {
+            "value": "1",
+            "label": "Option 1"
+          },
+          {
+            "value": "2",
+            "label": "Option 2"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "range",
+        "label": "Font Size",
+        "unit": "px",
+        "max": 32,
+        "min": 16,
+        "step": 1,
+        "default": 16
+      },
+      {
+        "type": "select",
+        "id": "sizes",
+        "label": "Sizes",
+        "options": [{
+          "value": "44",
+          "label": "44"
+        },
+        {
+          "value": "45",
+          "label": "45"
+        },
+        {
+          "value": "46",
+          "label": "46"
+        },
+        {
+          "value": "47",
+          "label": "47"
+        },
+        {
+          "value": "48",
+          "label": "48"
+        },
+        {
+          "value": "49",
+          "label": "49"
+        }]
+      },
+      {
+"type": "link_list",
+      "id": "menu",
+        "label": "Menu"
+      }
+    ],
+    "blocks": [
+     {
+       "name": "Slide",
+       "type": "slide",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+         }
+       ]
+     },
+      {
+        "name":"testBlock",
+        "type": "buy-buttons"
+      }
+  ],
+"presets": [
+    {
+      "name": "TestSection",
+
+    }
+  ]
+  }
+{% endschema %}

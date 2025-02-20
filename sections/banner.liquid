@@ -1,0 +1,43 @@
+<style>
+  .banner-radius{
+    border-radius: "{{
+      section.settings.border-radius
+    }}"
+  }
+</style>
+
+<div class="container">
+  <div class="banner banner-radius">
+    {% if section.settings.banner != blank %}
+      {{ section.settings.banner | image_url: width: 1440, height: 410 | image_tag: class: 'banner-image' }}
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Post Banner",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "banner",
+      "label": "Banner"
+    },
+    {
+      "type": "range",
+      "id": "border-radius",
+      "label": "Border Radius",
+      "max": 50,
+      "min": 5,
+      "default": 30,
+      "unit": "px",
+      "step": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner"
+    }
+  ]
+}
+{% endschema %}

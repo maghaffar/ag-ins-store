@@ -1,0 +1,31 @@
+<div>This is my text block</div>
+{% schema %}
+{
+  "name": "Text",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    }
+  ],
+   "blocks": [{"type": "@app"}, {"type": "@theme"}],
+  "presets": [
+    {
+      "name": "Text"
+    },
+ {
+      "name": "Slide",
+
+      "blocks": [
+        {
+          "type": "text",
+          "settings": {
+            "text": "<p>This is a slide!</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
