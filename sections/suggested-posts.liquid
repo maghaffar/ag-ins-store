@@ -1,0 +1,58 @@
+<div class="container">
+<h1 class="section-heading align-{{ section.settings.text-alignment }}">{{ section.settings.heading }}</h1>
+<div class="suggested-articles">
+    {% for block in section.blocks %}
+        {% if block.type == "suggested_post" %}
+            {% assign article = block.settings.suggested-article %}
+            <div class="suggested-article">
+                <img class="article-image" src="{{ article | image_url: width: 400 }}">
+                <div class="author">
+                    <p>{{ article.author }}</p>
+                    {{ 'dot.svg' | inline_asset_content }}
+                    <p>{{ article.published_at | date: '%d %B %Y'  }}</p>
+                </div>
+                <p class="article-title">{{ article.title }}</p>
+            </div>
+        {% endif %}
+    {% endfor %}
+</div>
+</div>
+{% schema %}
+{
+    "name": "Suggested Posts",
+    "limit": 1,
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Section Heading",
+            "default": "Suggested Posts"
+        },
+        {
+            "type": "text_alignment",
+            "id": "text-alignment",
+            "label": "Heading Alignment",
+            "default": "left"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Suggested Posts"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "suggested_post",
+            "name": "Suggested Post",
+            "settings": [
+                {
+                "type": "article",
+                "id": "suggested-article",
+                "label": "Suggested Article/Post"
+            }
+            ]
+
+        }
+    ]
+}
+{% endschema %}

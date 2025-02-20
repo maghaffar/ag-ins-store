@@ -3684,6 +3684,10 @@ details-disclosure > details {
   }
 }
 /* MY CSS FOR POST PAGE */
+@font-face {
+  font-family: "Oxygen";
+  src: url("/assets/Oxygen-Light.ttf");
+}
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -3701,7 +3705,7 @@ details-disclosure > details {
   gap: 40px;
 }
 .menu-text {
-  font-family: Oxygen;
+  font-family: "Oxygen";
   font-weight: 400;
   font-size: 16px;
   line-height: 20.2px;
@@ -3729,4 +3733,108 @@ details-disclosure > details {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.post-content {
+  margin-top: 10px;
+}
+.author {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #666666;
+}
+.author-image {
+  border-radius: 50%;
+}
+.post-heading {
+  font-family: "Oxygen";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 45.46px;
+  margin-bottom: 0;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.sub-heading {
+  font-family: "Exo";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26.58px;
+  margin-bottom: 10px;
+}
+.paragraph {
+  font-family: "Exo";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #666666;
+}
+.featured-products {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 23%;
+}
+.product-image {
+  border-radius: 14px;
+}
+.price-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-title {
+  font-family: "Oxygen";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27.78px;
+  color: #404040;
+  margin: 0;
+}
+.prev-price {
+  font-family: "Oxygen";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.68px;
+  text-decoration: line-through;
+  color: #404040;
+  margin: 0;
+}
+.price {
+  font-family: "Oxygen";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17.68px;
+  color: black;
+  margin: 0;
+}
+.add-to-cart {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.suggested-articles {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.suggested-article {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 31%;
 }
