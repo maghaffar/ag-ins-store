@@ -3871,6 +3871,7 @@ details-disclosure > details {
   justify-content: space-between;
   gap: 20px;
   margin-top: 50px;
+  padding: 0 100px;
 }
 .footer-menu {
   display: flex;
