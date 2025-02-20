@@ -140,9 +140,54 @@
     },
     "partners_9CdPLn": {
       "type": "partners",
+      "blocks": {
+        "partner_logo_DRnYM4": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/yahoo-news-img_2.png"
+          }
+        },
+        "partner_logo_eV33wp": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/Healthline-img_1.png"
+          }
+        },
+        "partner_logo_Nr8ppy": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/MSN-logo_1.png"
+          }
+        },
+        "partner_logo_cHpdQL": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/shefinds-logo_1.png"
+          }
+        },
+        "partner_logo_aHWxGV": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/yahoo-news-img_2.png"
+          }
+        },
+        "partner_logo_bUikBU": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/yahoo-news-img_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "partner_logo_DRnYM4",
+        "partner_logo_eV33wp",
+        "partner_logo_Nr8ppy",
+        "partner_logo_cHpdQL",
+        "partner_logo_aHWxGV",
+        "partner_logo_bUikBU"
+      ],
       "settings": {
-        "background-color": "#666666",
-        "partner_logo": "shopify://shop_images/yahoo-news-img_2.png"
+        "background-color": "#666666"
       }
     }
   },
