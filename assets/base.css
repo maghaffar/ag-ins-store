@@ -3852,6 +3852,7 @@ details-disclosure > details {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 800px;
 }
 .newsletter-text {
   font-family: "Oxygen";
