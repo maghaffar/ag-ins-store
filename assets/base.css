@@ -3883,6 +3883,7 @@ details-disclosure > details {
   font-size: 18px;
   line-height: 22.73px;
   color: #9a9a9a;
+  margin: 0;
 }
 .footer-menu-text {
   font-family: "Oxygen";
