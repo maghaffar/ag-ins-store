@@ -75,7 +75,20 @@
         "paragraph_GhbCPb": {
           "type": "paragraph",
           "settings": {
-            "paragraph": "",
+            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>",
+            "text-alignment": "left"
+          }
+        },
+        "sub_heading_BD3TrP": {
+          "type": "sub_heading",
+          "settings": {
+            "sub-heading": "This is a Sub Heading"
+          }
+        },
+        "paragraph_PtWg8e": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>",
             "text-alignment": "left"
           }
         }
@@ -87,14 +100,49 @@
         "sub_heading_b9BRUJ",
         "paragraph_ihYXKF",
         "featured_products_wNMHTR",
-        "paragraph_GhbCPb"
+        "paragraph_GhbCPb",
+        "sub_heading_BD3TrP",
+        "paragraph_PtWg8e"
       ],
       "settings": {}
+    },
+    "suggested_posts_b8rGPV": {
+      "type": "suggested-posts",
+      "blocks": {
+        "suggested_post_fBbCCE": {
+          "type": "suggested_post",
+          "settings": {
+            "suggested-article": "sale/the-new-summer-sale-is-live-now"
+          }
+        },
+        "suggested_post_Q9eMVW": {
+          "type": "suggested_post",
+          "settings": {
+            "suggested-article": "news/probably-the-best-advertising-strategy-in-the-world"
+          }
+        },
+        "suggested_post_4FrrJ9": {
+          "type": "suggested_post",
+          "settings": {
+            "suggested-article": "news/latest-news-post"
+          }
+        }
+      },
+      "block_order": [
+        "suggested_post_fBbCCE",
+        "suggested_post_Q9eMVW",
+        "suggested_post_4FrrJ9"
+      ],
+      "settings": {
+        "heading": "Suggested Posts",
+        "text-alignment": "left"
+      }
     }
   },
   "order": [
     "main",
     "banner_3JNLpR",
-    "blog_content_BDcYdL"
+    "blog_content_BDcYdL",
+    "suggested_posts_b8rGPV"
   ]
 }
