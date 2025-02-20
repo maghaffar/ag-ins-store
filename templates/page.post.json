@@ -39,11 +39,55 @@
             "author-name": "Melissa",
             "published-at": "18 Jan 2025"
           }
+        },
+        "paragraph_gxMcyy": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetuer <strong>adipiscing</strong> elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>",
+            "text-alignment": "left"
+          }
+        },
+        "sub_heading_b9BRUJ": {
+          "type": "sub_heading",
+          "settings": {
+            "sub-heading": "This is Sub Heading"
+          }
+        },
+        "paragraph_ihYXKF": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>",
+            "text-alignment": "left"
+          }
+        },
+        "featured_products_wNMHTR": {
+          "type": "featured_products",
+          "settings": {
+            "featured-products": [
+              "dr-martens-1460z-dmc-8-eye-boot-cherry-smooth",
+              "converse-chuck-taylor-all-star-lo",
+              "jacquard-blue-dress",
+              "pink-night-dress"
+            ],
+            "prod-title-alignment": "center"
+          }
+        },
+        "paragraph_GhbCPb": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "",
+            "text-alignment": "left"
+          }
         }
       },
       "block_order": [
         "heading_YJJeaY",
-        "author_D9RGLU"
+        "author_D9RGLU",
+        "paragraph_gxMcyy",
+        "sub_heading_b9BRUJ",
+        "paragraph_ihYXKF",
+        "featured_products_wNMHTR",
+        "paragraph_GhbCPb"
       ],
       "settings": {}
     }
