@@ -3844,6 +3844,7 @@ details-disclosure > details {
 }
 .partners {
   margin-top: 100px;
+  padding: 50px 0;
   display: flex;
   justify-content: space-evenly;
 }
