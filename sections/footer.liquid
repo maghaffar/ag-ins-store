@@ -16,11 +16,11 @@
       {% for link in section.settings.footer.links %}
         {% if link.links != blank %}
           <div class="footer-menu">
-            <p>{{ link.title }}</p>
+            <p class="footer-menu-title">{{ link.title }}</p>
             <ul class="footer-list">
               {% for childlink in link.links %}
                 <li>
-                  <a class="link" href="{{ childlink.url }}">{{ childlink.title }}</a>
+                  <a class="link footer-menu-text" href="{{ childlink.url }}">{{ childlink.title }}</a>
                 </li>
               {% endfor %}
             </ul>
