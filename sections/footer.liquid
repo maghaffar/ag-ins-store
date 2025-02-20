@@ -1,8 +1,27 @@
-<div class="footer"></div>
+<div class="footer">
+  <div class="newsletter">
+    {% if section.settings.footer_logo != blank %}
+      {{ section.settings.footer_logo | image_url: width: 96, height: 55 | image_tag }}
+      <p class="newsletter-text">{{ section.settings.newsletter_text }}</p>
+    {% endif %}
+  </div>
+</div>
 {% schema %}
 {
   "name": "Footer",
-  "settings": [],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer Logo"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_text",
+      "label": "Newsletter Text",
+      "default": "Subscribe To Your Newsletter to Stay Updated About Discounts"
+    }
+],
   "presets": [
     {
       "name": "Footer"
