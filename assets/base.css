@@ -3796,7 +3796,7 @@ details-disclosure > details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 100px;
+  padding: 0 10px;
 }
 .product-title {
   font-family: "Oxygen";
