@@ -1,7 +1,7 @@
 <style>
   .footer{
     background-color: {{section.settings.background-color}};
-    padding-top: 100px;
+    padding-top: 100px 50px 0 50px;
   }
 </style>
 <div class="footer">
@@ -9,6 +9,24 @@
     {% if section.settings.footer_logo != blank %}
       {{ section.settings.footer_logo | image_url: width: 96, height: 55 | image_tag }}
       <p class="newsletter-text">{{ section.settings.newsletter_text }}</p>
+    {% endif %}
+  </div>
+  <div class="footer-main">
+    {% if section.settings.menu != blank %}
+      {% for link in section.settings.footer.links %}
+        {% if link.links != blank %}
+          <div class="footer-menu">
+            <p>{{ link.title }}</p>
+            <ul class="footer-list">
+              {% for childlink in link.links %}
+                <li>
+                  <a class="link" href="{{ childlink.url }}">{{ childlink.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+      {% endfor %}
     {% endif %}
   </div>
 </div>
