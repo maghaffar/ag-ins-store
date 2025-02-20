@@ -137,12 +137,20 @@
         "heading": "Suggested Posts",
         "text-alignment": "left"
       }
+    },
+    "partners_9CdPLn": {
+      "type": "partners",
+      "settings": {
+        "background-color": "#666666",
+        "partner_logo": "shopify://shop_images/yahoo-news-img_2.png"
+      }
     }
   },
   "order": [
     "main",
     "banner_3JNLpR",
     "blog_content_BDcYdL",
-    "suggested_posts_b8rGPV"
+    "suggested_posts_b8rGPV",
+    "partners_9CdPLn"
   ]
 }
