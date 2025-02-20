@@ -3742,6 +3742,7 @@ details-disclosure > details {
   gap: 10px;
   align-items: center;
   color: #666666;
+  margin-top: 10px;
 }
 .author-image {
   border-radius: 50%;
