@@ -3842,3 +3842,8 @@ details-disclosure > details {
   gap: 30px;
   width: 31%;
 }
+.partners {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
