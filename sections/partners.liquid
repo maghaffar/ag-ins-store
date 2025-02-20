@@ -7,8 +7,8 @@
   {% for block in section.blocks %}
     {% case block.type %}
       {% when 'partner-logo' %}
-        {% if section.settings.partner_logo != blank %}
-          {{ section.settings.partner_logo | image_url: width: 140 | image_tag }}
+        {% if block.settings.partner_logo != blank %}
+          {{ block.settings.partner_logo | image_url: width: 140, height: 24 | image_tag }}
         {% endif %}
     {% endcase %}
   {% endfor %}
