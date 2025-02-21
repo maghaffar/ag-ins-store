@@ -26,12 +26,16 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener("click", function (event) {
             event.stopPropagation();
             const nestedSubmenu = this.querySelector(".nested-submenu");
-
+            const svgWrapper = this.querySelector(".svg-wrapper");
+          
             if (nestedSubmenu) {
                 const isVisible = nestedSubmenu.style.display === "block";
                 document.querySelectorAll(".nested-submenu").forEach(ns => ns.style.display = "none");
                 nestedSubmenu.style.display = isVisible ? "none" : "block";
             }
+          if (!isVisible) {
+                    svgWrapper.classList.add("rotate");
+                }
         });
     });
 
@@ -39,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", function (event) {
         if (!event.target.closest(".submenu")) {
             document.querySelectorAll(".nested-submenu").forEach(ns => ns.style.display = "none");
+           document.querySelectorAll(".svg-wrapper").forEach(svg => svg.classList.remove("rotate"));
         }
     });
 });
