@@ -3759,7 +3759,7 @@ details-disclosure > details {
 }
 .author {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
   color: #666666;
   margin-top: 10px;
@@ -3875,6 +3875,9 @@ details-disclosure > details {
 }
 .suggested-posts {
   margin-top: 100px;
+}
+.suggested-posts .author {
+  margin-top: 10px;
 }
 .suggested-articles {
   display: flex;
