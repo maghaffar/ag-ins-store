@@ -27,15 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
             event.stopPropagation();
             const nestedSubmenu = this.querySelector(".nested-submenu");
             const svgWrapper = document.querySelector(".submenu-item .svg-wrapper");
+
           
             if (nestedSubmenu) {
                 const isVisible = nestedSubmenu.style.display === "block";
                 document.querySelectorAll(".nested-submenu").forEach(ns => ns.style.display = "none");
                 nestedSubmenu.style.display = isVisible ? "none" : "block";
-            }
-          if (!isVisible) {
+
+              if (!isVisible) {
                     svgWrapper.classList.add("rotate");
                 }
+            }
+          
         });
     });
 
