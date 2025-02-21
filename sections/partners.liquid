@@ -8,7 +8,9 @@
     {% case block.type %}
       {% when 'partner-logo' %}
         {% if block.settings.partner_logo != blank %}
-          {{ block.settings.partner_logo | image_url: width: 140, height: 24 | image_tag }}
+          <div class="partner-svg-wrapper">
+            {{ block.settings.partner_logo | image_url: width: 300, height: 100 | image_tag }}
+          </div>
         {% endif %}
     {% endcase %}
   {% endfor %}
