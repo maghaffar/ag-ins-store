@@ -3806,6 +3806,13 @@ details-disclosure > details {
   left: 0;
   top: 0;
   opacity: 0;
+  transition: opacity 1s ease;
+}
+.product:hover .product-image-2 {
+  opacity: 1 !important;
+}
+.product:hover .product-image {
+  opacity: 0;
 }
 .price-main {
   display: flex;
