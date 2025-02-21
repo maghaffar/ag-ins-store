@@ -20,4 +20,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     menuTitle.addEventListener("mouseleave", hideSubmenu);
     submenu.addEventListener("mouseleave", hideSubmenu);
+
+  
+    document.querySelectorAll(".submenu-item").forEach(item => {
+        item.addEventListener("click", function (event) {
+            event.stopPropagation();
+            const nestedSubmenu = this.querySelector(".nested-submenu");
+
+            if (nestedSubmenu) {
+                const isVisible = nestedSubmenu.style.display === "block";
+                document.querySelectorAll(".nested-submenu").forEach(ns => ns.style.display = "none");
+                nestedSubmenu.style.display = isVisible ? "none" : "block";
+            }
+        });
+    });
+
+    // Close nested submenu when clicking anywhere outside
+    document.addEventListener("click", function (event) {
+        if (!event.target.closest(".submenu")) {
+            document.querySelectorAll(".nested-submenu").forEach(ns => ns.style.display = "none");
+        }
+    });
 });
