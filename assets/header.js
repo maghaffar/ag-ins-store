@@ -37,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
               if (!isVisible) {
                     svgWrapper.classList.add("rotate");
                 }
+              else{
+                svgWrapper.classList.remove("rotate")
+              }
             }
           
         });
