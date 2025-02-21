@@ -3704,6 +3704,9 @@ details-disclosure > details {
   align-items: center;
   gap: 40px;
 }
+.menu-item {
+  position: relative;
+}
 .menu-text {
   font-family: "Oxygen";
   font-weight: 400;
@@ -3713,12 +3716,21 @@ details-disclosure > details {
 }
 .submenu {
   display: none;
+  position: absolute;
+  top: 30px;
+  z-index: 2;
+  background-color: ghostwhite;
+  padding-left: 30px;
+  padding-right: 115px;
+  width: 300px;
 }
 .menu-title:hover .submenu {
   display: block;
 }
 .submenu-list {
   list-style: none;
+  padding: 0;
+  width: 100%;
 }
 .header-icons {
   display: flex;
