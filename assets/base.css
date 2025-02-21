@@ -3818,7 +3818,7 @@ details-disclosure > details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
+  padding-left: 15px;
 }
 .product-title {
   font-family: "Oxygen";
