@@ -3713,6 +3713,7 @@ details-disclosure > details {
   font-size: 16px;
   line-height: 20.2px;
   color: black;
+  cursor: pointer;
 }
 .submenu {
   display: none;
