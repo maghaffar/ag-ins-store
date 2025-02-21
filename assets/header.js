@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Close nested submenu when clicking anywhere outside
+    
     document.addEventListener("click", function (event) {
         if (!event.target.closest(".submenu")) {
             document.querySelectorAll(".nested-submenu").forEach(ns => ns.style.display = "none");
