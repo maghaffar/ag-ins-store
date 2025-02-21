@@ -18,9 +18,28 @@
     },
     "banner_3JNLpR": {
       "type": "banner",
+      "blocks": {
+        "heading_xUA8MQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "This is the Heading of the Blog",
+            "centered_heading": true
+          }
+        },
+        "author_Fmatgf": {
+          "type": "author",
+          "settings": {
+            "author-image": "shopify://shop_images/p2.webp",
+            "author-name": "Melissa",
+            "published-at": "18 Jan 2025"
+          }
+        }
+      },
+      "block_order": ["heading_xUA8MQ", "author_Fmatgf"],
       "settings": {
         "banner": "shopify://shop_images/article-banner.jpg",
-        "border-radius": 30
+        "border-radius": 30,
+        "heading_color": "#000000"
       }
     },
     "blog_content_BDcYdL": {
@@ -125,58 +144,14 @@
     "partners_9CdPLn": {
       "type": "partners",
       "blocks": {
-        "partner_logo_DRnYM4": {
-          "type": "partner-logo",
-          "settings": {
-            "partner_logo": "shopify://shop_images/Healthline-img_1.png"
-          }
-        },
-        "partner_logo_eV33wp": {
-          "type": "partner-logo",
-          "settings": {
-            "partner_logo": "shopify://shop_images/Healthline-img_1.png"
-          }
-        },
-        "partner_logo_Nr8ppy": {
-          "type": "partner-logo",
-          "settings": {
-            "partner_logo": "shopify://shop_images/MSN-logo_1.png"
-          }
-        },
-        "partner_logo_cHpdQL": {
-          "type": "partner-logo",
-          "settings": {
-            "partner_logo": "shopify://shop_images/shefinds-logo_1.png"
-          }
-        },
-        "partner_logo_aHWxGV": {
-          "type": "partner-logo",
-          "settings": {
-            "partner_logo": "shopify://shop_images/yahoo-news-img_2.png"
-          }
-        },
-        "partner_logo_bUikBU": {
-          "type": "partner-logo",
-          "settings": {
-            "partner_logo": "shopify://shop_images/yahoo-news-img_2.png"
-          }
-        },
         "partner_logo_Vk9W4R": {
           "type": "partner-logo",
           "settings": {
-            "partner_logo": "shopify://shop_images/shefinds-logo_1.png"
+            "partner_logo": "shopify://shop_images/yahoo-svgrepo-com.svg"
           }
         }
       },
-      "block_order": [
-        "partner_logo_DRnYM4",
-        "partner_logo_eV33wp",
-        "partner_logo_Nr8ppy",
-        "partner_logo_cHpdQL",
-        "partner_logo_aHWxGV",
-        "partner_logo_bUikBU",
-        "partner_logo_Vk9W4R"
-      ],
+      "block_order": ["partner_logo_Vk9W4R"],
       "settings": {
         "background-color": "#666666"
       }
