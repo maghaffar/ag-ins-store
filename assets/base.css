@@ -3795,9 +3795,17 @@ details-disclosure > details {
   flex-direction: column;
   gap: 12px;
   width: 23%;
+  position: relative;
 }
 .product-image {
   border-radius: 14px;
+  opacity: 1;
+}
+.product-image-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
 }
 .price-main {
   display: flex;
