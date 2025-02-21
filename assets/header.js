@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
         item.addEventListener("click", function (event) {
             event.stopPropagation();
             const nestedSubmenu = this.querySelector(".nested-submenu");
-            const svgWrapper = document.querySelector(".submenu-item .svg-wrapper");
+            const svgWrapper = this.querySelector(".svg-wrapper");
 
           
             if (nestedSubmenu) {
