@@ -3724,7 +3724,7 @@ details-disclosure > details {
   padding-right: 115px;
   width: 300px;
 }
-.menu-title:hover .submenu {
+.menu-title:hover + .submenu {
   display: block;
 }
 .submenu-list {
