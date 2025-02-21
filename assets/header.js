@@ -1,17 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
     const menuTitle = document.querySelector(".menu-title");
     const submenu = document.querySelector(".submenu");
-
+    const menuArrow = document.querySelector(".menu-title .svg-wrapper");
+  
     let timeout;
 
     function showSubmenu() {
         clearTimeout(timeout); 
         submenu.style.display = "block";
+      menuArrow.classList.add("rotate");
     }
 
     function hideSubmenu() {
         timeout = setTimeout(() => {
             submenu.style.display = "none";
+          menuArrow.classList.remove("rotate")
         }, 300); 
     }
 
