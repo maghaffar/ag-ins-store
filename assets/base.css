@@ -3731,6 +3731,21 @@ details-disclosure > details {
   padding: 0;
   width: 100%;
 }
+.submenu-item {
+  position: relative;
+}
+.nested-submenu {
+  display: none;
+  position: absolute;
+  top: 25px;
+  z-index: 2;
+  background-color: ghostwhite;
+  padding-left: 30px;
+  width: 300px;
+}
+.submenu-item:hover .nested-submenu {
+  display: block;
+}
 .header-icons {
   display: flex;
   gap: 40px;
