@@ -3713,7 +3713,7 @@ details-disclosure > details {
 }
 .menu-text {
   font-family: "Oxygen";
-  font-weight: 600;
+  font-weight: 400;
   font-size: 16px;
   line-height: 20.2px;
   color: black;
@@ -3728,6 +3728,9 @@ details-disclosure > details {
   background-color: ghostwhite;
   padding: 10px;
   width: 170px;
+}
+.submenu .menu-text {
+  font-weight: 600;
 }
 
 .submenu-title {
