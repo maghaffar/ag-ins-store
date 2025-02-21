@@ -3725,7 +3725,7 @@ details-disclosure > details {
 .submenu {
   display: none;
   position: absolute;
-  top: 20px;
+  top: 25px;
   left: -35px;
   z-index: 2;
   background-color: ghostwhite;
