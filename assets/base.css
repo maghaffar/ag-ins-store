@@ -3746,9 +3746,7 @@ details-disclosure > details {
   margin-top: 10px;
   margin-left: 10px;
 }
-.submenu-item:hover .nested-submenu {
-  display: block;
-}
+
 .header-icons {
   display: flex;
   gap: 40px;
