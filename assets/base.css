@@ -3719,7 +3719,7 @@ details-disclosure > details {
   color: black;
   cursor: pointer;
 }
-.menu-title:hover {
+.border-bottom {
   border-bottom: 2px solid black;
 }
 .submenu {
