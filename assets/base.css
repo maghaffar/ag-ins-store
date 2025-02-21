@@ -3717,11 +3717,12 @@ details-disclosure > details {
 .submenu {
   display: none;
   position: absolute;
-  top: 25px;
+  top: 20px;
+  left: -35px;
   z-index: 2;
   background-color: ghostwhite;
-  padding-left: 30px;
-  width: 300px;
+  padding: 10px;
+  width: 170px;
 }
 .menu-title:hover + .submenu {
   display: block;
