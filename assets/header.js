@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", function (event) {
         if (!event.target.closest(".submenu")) {
             document.querySelectorAll(".nested-submenu").forEach(ns => ns.style.display = "none");
-           document.querySelectorAll(".svg-wrapper").forEach(svg => svg.classList.remove("rotate"));
+           document.querySelectorAll(".submenu-item .svg-wrapper").forEach(svg => svg.classList.remove("rotate"));
         }
     });
 });
