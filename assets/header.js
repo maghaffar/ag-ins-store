@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
     let timeout;
 
     function showSubmenu() {
-        clearTimeout(timeout); // Clear any pending close action
+        clearTimeout(timeout); 
         submenu.style.display = "block";
     }
 
     function hideSubmenu() {
         timeout = setTimeout(() => {
             submenu.style.display = "none";
-        }, 300); // Add a slight delay to avoid abrupt closing
+        }, 300); 
     }
 
     menuTitle.addEventListener("mouseenter", showSubmenu);
