@@ -646,6 +646,10 @@ h3 .icon-arrow,
   align-items: center;
   width: 10px;
   height: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.rotate {
+  transform: rotate(180deg);
 }
 
 .svg-wrapper > svg {
