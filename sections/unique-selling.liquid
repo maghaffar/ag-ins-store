@@ -1,0 +1,24 @@
+<style>
+    .unique-selling{
+        background-color: {{ section.settings.background_color }}
+    }
+</style>
+<div class="unique-selling">
+    Unique Selling {{ page.metafields.custom.heading }}
+</div>
+{% schema %}
+{
+    "name": "Unique Selling",
+    "settings": [{
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#666666"
+    }],
+    "presets": [
+        {
+            "name": "Unique Selling"
+        }
+    ]
+}
+{% endschema %}

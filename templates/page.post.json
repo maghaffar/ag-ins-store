@@ -138,6 +138,9 @@
         "text-alignment": "left"
       }
     },
+    "unique_selling": {
+      "type": "unique-selling"
+    },
     "partners_9CdPLn": {
       "type": "partners",
       "blocks": {
@@ -203,6 +206,7 @@
     "banner_3JNLpR",
     "blog_content_BDcYdL",
     "suggested_posts_b8rGPV",
+    "unique_selling",
     "partners_9CdPLn"
   ]
 }

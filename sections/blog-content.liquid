@@ -1,17 +1,6 @@
 <div class="container post-content">
 {% for block in section.blocks %}
     {% case block.type %}
-      {% when "heading" %}
-        <h1 class="post-heading">{{ block.settings.heading }}</h1>
-      {% when "author" %}
-        <div class="author">
-            {% if block.settings.author-image != blank %}
-                {{ block.settings.author-image | image_url: width: 40, height: 40 | image_tag: class: "author-image"  }}
-            {% endif %}
-            <p>{{ block.settings.author-name }}</p>
-            {{ 'dot.svg' | inline_asset_content }}
-            <p>{{ block.settings.published-at }}</p>
-        </div>
       {% when "paragraph" %}
         <div class="align-{{ block.settings.text-alignment }} paragraph">
             {{ block.settings.paragraph }}
@@ -24,8 +13,14 @@
       <div class="featured-products">
         {% for product in block.settings.featured-products %}
             <div class="product">
-                <img class="product-image" src="{{ product | image_url: width: 300 }}" alt="{{ product.title }}" />
-                <p class="product-title align-{{ block.settings.prod-title-alignment }}">{{ product.title }}</p>
+                <a class="link images" href="{{ product.url }}">
+                    {{ product | image_url: width: 300 | image_tag: class: "product-image" }}
+                {% if product.images.size > 1 %}
+                    {% assign lastProductImage = product.images | last %}
+                    {{  lastProductImage | image_url: width: 300 | image_tag: class: "product-image product-image-2" }}
+                {% endif %}
+            </a>
+                <div class="align-{{ block.settings.prod-title-alignment }}">{{ product.title | link_to: product.url, class: "link product-title" }}</div>
                 <div class="price-main">
                     <div>
                        <span class="prev-price">{{ product.compare_at_price | money_without_trailing_zeros }} </span>
@@ -46,40 +41,6 @@
     "name": "Post Content",
     "limit": 1,
     "blocks": [
-        {
-            "type": "heading",
-            "name": "Heading",
-            "limit": 1,
-            "settings": [
-                {
-                    "type": "text",
-                    "id": "heading",
-                    "label": "Heading",
-                }
-            ]
-        },
-        {
-            "type": "author",
-            "name": "Author",
-            "limit": 1,
-            "settings": [
-                {
-                    "type": "image_picker",
-                    "id": "author-image",
-                    "label": "Author DP"
-                },
-                {
-                    "type": "text",
-                    "id": "author-name",
-                    "label": "Author Name"
-                },
-                {
-                    "type": "text",
-                    "id": "published-at",
-                    "label": "Published At",
-                }
-            ]
-        },
         {
             "type": "paragraph",
             "name":"Paragraph",

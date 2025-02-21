@@ -4,14 +4,36 @@
       section.settings.border-radius
     }}px
   }
+  .post-heading{
+  color: {{ section.settings.heading_color }}
+}
 </style>
 
-<div class="container">
+<div class="container banner-main">
   <div class="banner banner-radius">
     {% if section.settings.banner != blank %}
       {{ section.settings.banner | image_url: width: 1440, height: 410 | image_tag: class: 'banner-image' }}
     {% endif %}
   </div>
+  {% for block in section.blocks %}
+    {% case block.type %}
+    {% when "heading" %}
+      {% unless block.settings.centered_heading %}
+        <h1 class="post-heading">{{ block.settings.heading }}</h1>
+      {% else %}
+        <h1 class="post-heading centered-heading">{{ block.settings.heading }}</h1>
+      {% endunless %}
+    {% when "author" %}
+      <div class="author">
+        {% if block.settings.author-image != blank %}
+            {{ block.settings.author-image | image_url: width: 40, height: 40 | image_tag: class: "author-image"  }}
+        {% endif %}
+        {{ block.settings.author-name }}
+        {{ 'dot.svg' | inline_asset_content }}
+        {{ block.settings.published-at }}
+    </div>
+    {% endcase %}
+  {% endfor %}
 </div>
 {% schema %}
 {
@@ -32,7 +54,55 @@
       "default": 30,
       "unit": "px",
       "step": 5
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#000000"
     }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+          {
+              "type": "text",
+              "id": "heading",
+              "label": "Heading",
+          },
+          {
+            "type": "checkbox",
+            "id": "centered_heading",
+            "label": "Centered in Banner",
+            "default": false
+          },
+      ]
+  },
+  {
+      "type": "author",
+      "name": "Author",
+      "limit": 1,
+      "settings": [
+          {
+              "type": "image_picker",
+              "id": "author-image",
+              "label": "Author DP"
+          },
+          {
+              "type": "text",
+              "id": "author-name",
+              "label": "Author Name"
+          },
+          {
+              "type": "text",
+              "id": "published-at",
+              "label": "Published At",
+          }
+      ]
+  },
   ],
   "presets": [
     {

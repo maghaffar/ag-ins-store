@@ -5,13 +5,13 @@
       {% if block.type == 'suggested_post' %}
         {% assign article = block.settings['suggested-article'] %}
         <div class="suggested-article">
-          <img class="article-image" src="{{ article | image_url: width: 400 }}">
+          <a class="link" href="{{ article.url }}"><img class="article-image" src="{{ article | image_url: width: 400, height: 320 }}"></a>
           <div class="author">
-            <p>{{ article.author }}</p>
+            {{ article.author }}
             {{ 'dot.svg' | inline_asset_content }}
-            <p>{{ article.published_at | date: '%d %B %Y' }}</p>
+            {{ article.published_at | date: '%d %B %Y' }}
           </div>
-          <p class="article-title">{{ article.title }}</p>
+          <p class="article-title">{{ article.title | link_to: article.url, class: "link" }}</p>
         </div>
       {% endif %}
     {% endfor %}

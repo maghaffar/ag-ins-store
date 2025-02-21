@@ -8,8 +8,12 @@
   <div class="newsletter">
     {% if section.settings.footer_logo != blank %}
       {{ section.settings.footer_logo | image_url: width: 96, height: 55 | image_tag }}
-      <p class="newsletter-text">{{ section.settings.newsletter_text }}</p>
     {% endif %}
+    <p class="newsletter-text">{{ section.settings.newsletter_text }}</p>
+ <div class="newsletter-form">
+  <input class="newsletter-input" type="email" name="email" placeholder="person@email.com">
+  <button class="email-submit">{{'chevron-down.svg' | inline_asset_content }}</button>
+ </div>
   </div>
   <div class="footer-main">
     {% if section.settings.footer != blank %}
