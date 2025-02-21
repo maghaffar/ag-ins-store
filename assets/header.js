@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll(".submenu-item").forEach(item => {
         item.addEventListener("click", function (event) {
-            event.stopPropagation();
+            // event.stopPropagation();
             const nestedSubmenu = this.querySelector(".nested-submenu");
             const svgWrapper = this.querySelector(".svg-wrapper");
 
