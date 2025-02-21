@@ -35,7 +35,10 @@
           }
         }
       },
-      "block_order": ["heading_xUA8MQ", "author_Fmatgf"],
+      "block_order": [
+        "heading_xUA8MQ",
+        "author_Fmatgf"
+      ],
       "settings": {
         "banner": "shopify://shop_images/article-banner.jpg",
         "border-radius": 30,
@@ -149,9 +152,46 @@
           "settings": {
             "partner_logo": "shopify://shop_images/yahoo-svgrepo-com.svg"
           }
+        },
+        "partner_logo_akxG7D": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/yahoo-svgrepo-com.svg"
+          }
+        },
+        "partner_logo_iQyDJi": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/yahoo-svgrepo-com.svg"
+          }
+        },
+        "partner_logo_eMUGck": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/yahoo-svgrepo-com.svg"
+          }
+        },
+        "partner_logo_UVG3Um": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/yahoo-svgrepo-com.svg"
+          }
+        },
+        "partner_logo_jfBHRW": {
+          "type": "partner-logo",
+          "settings": {
+            "partner_logo": "shopify://shop_images/yahoo-svgrepo-com.svg"
+          }
         }
       },
-      "block_order": ["partner_logo_Vk9W4R"],
+      "block_order": [
+        "partner_logo_Vk9W4R",
+        "partner_logo_akxG7D",
+        "partner_logo_iQyDJi",
+        "partner_logo_eMUGck",
+        "partner_logo_UVG3Um",
+        "partner_logo_jfBHRW"
+      ],
       "settings": {
         "background-color": "#666666"
       }
