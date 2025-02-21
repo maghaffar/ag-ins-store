@@ -3712,6 +3712,10 @@ details-disclosure > details {
   color: black;
 }
 .submenu {
+  display: none;
+}
+.menu-title:hover .submenu {
+  display: block;
 }
 .submenu-list {
   list-style: none;
