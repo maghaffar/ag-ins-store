@@ -3719,6 +3719,9 @@ details-disclosure > details {
   color: black;
   cursor: pointer;
 }
+.menu-title:hover {
+  border-bottom: 2px solid black;
+}
 .submenu {
   display: none;
   position: absolute;
