@@ -3725,9 +3725,7 @@ details-disclosure > details {
   padding: 10px;
   width: 170px;
 }
-/* .menu-title:hover + .submenu {
-  display: block;
-} */
+
 .submenu-title {
   display: flex;
   align-items: center;
