@@ -3728,6 +3728,11 @@ details-disclosure > details {
 .menu-title:hover + .submenu {
   display: block;
 }
+.submenu-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .submenu-list {
   list-style: none;
   padding: 0;
