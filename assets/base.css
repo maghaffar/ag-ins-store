@@ -3800,6 +3800,7 @@ details-disclosure > details {
 .product-image {
   border-radius: 14px;
   opacity: 1;
+  max-width: 100%;
 }
 .product-image-2 {
   position: absolute;
@@ -3807,6 +3808,7 @@ details-disclosure > details {
   top: 0;
   opacity: 0;
   transition: opacity 1s ease;
+  max-width: 100%;
 }
 .product:hover .product-image-2 {
   opacity: 1 !important;
