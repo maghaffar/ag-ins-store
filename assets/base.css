@@ -4079,4 +4079,11 @@ details-disclosure > details {
   .suggested-article {
     width: 100%;
   }
+  .post-heading {
+    font-size: 16px;
+  }
+  .centered-heading {
+    top: 26%;
+    left: 20%;
+  }
 }
