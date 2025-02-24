@@ -156,7 +156,7 @@
       {% if cart != empty %}
         {% for item in cart.items %}
           <div class="cart-item">
-            <img src="{{ item.image }}" alt="{{ item.product_title }}" class="cart-item-image">
+            {{ item.image | image_url: width: 100 | image_tag: class: 'cart-item-image' }}
             <div class="cart-item-details">
               <h4>{{ item.product_title }}</h4>
               <p>
