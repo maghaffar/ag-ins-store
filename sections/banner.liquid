@@ -14,7 +14,7 @@
     {% if section.settings.banner != blank %}
       {{ section.settings.banner | image_url: width: 1440, height: 410 | image_tag: class: 'banner-image' }}
     {% endif %}
-  </div>
+  <!-- </div> -->
   {% for block in section.blocks %}
     {% case block.type %}
       {% when 'heading' %}
@@ -23,6 +23,7 @@
         {% else %}
           <h1 class="post-heading centered-heading">{{ block.settings.heading }}</h1>
         {% endunless %}
+      </div>
       {% when 'author' %}
         <div class="author">
           {% if block.settings['author-image'] != blank %}
