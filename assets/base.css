@@ -3760,6 +3760,10 @@ details-disclosure > details {
   gap: 40px;
   padding-top: 10px;
 }
+.mobile-menu .submenu {
+  position: static;
+  background-color: white;
+}
 .border-bottom {
   border-bottom: 2px solid black;
 }
