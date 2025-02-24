@@ -4039,4 +4039,7 @@ details-disclosure > details {
     padding-left: 50px;
     padding-right: 50px;
   }
+  .product {
+    width: 31%;
+  }
 }
