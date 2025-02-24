@@ -65,10 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
   closeButton.addEventListener("click", toggleSidebar);
 
   // Footer List Toggle
- document.querySelectorAll(".footer-menu-title").forEach(title => {
+ document.querySelectorAll(".footer-menu").forEach(title => {
     title.addEventListener("click", function () {
-      const parent = this.parentElement;
-      parent.classList.toggle("open");
+      this.classList.toggle("open");
     });
   });
 });
