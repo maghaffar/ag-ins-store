@@ -4175,4 +4175,10 @@ details-disclosure > details {
     top: 26%;
     left: 20%;
   }
+  .newsletter-text {
+    font-size: 16px;
+  }
+  .paragraph {
+    font-size: 16px;
+  }
 }
