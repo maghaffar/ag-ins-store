@@ -63,4 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hamburger.addEventListener("click", toggleSidebar);
   closeButton.addEventListener("click", toggleSidebar);
+
+  // Footer List Toggle
+ document.querySelectorAll(".footer-menu-title").forEach(title => {
+    title.addEventListener("click", function () {
+      const parent = this.parentElement;
+      parent.classList.toggle("open");
+    });
+  });
 });
