@@ -3799,6 +3799,10 @@ details-disclosure > details {
   flex: 1;
 }
 
+.cart-item-details p {
+  margin: 0;
+}
+
 .quantity {
   display: flex;
   align-items: center;
@@ -3810,9 +3814,6 @@ details-disclosure > details {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-}
-.cart-item p {
-  margin: 0;
 }
 
 .border-bottom {
