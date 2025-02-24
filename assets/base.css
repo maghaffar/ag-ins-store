@@ -4067,13 +4067,15 @@ details-disclosure > details {
     padding: 0 40px;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 732px) {
   .menu {
     display: none;
   }
   .footer-main {
     display: none;
   }
+}
+@media (max-width: 480px) {
   .product {
     width: 100%;
   }
