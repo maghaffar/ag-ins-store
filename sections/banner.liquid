@@ -12,7 +12,7 @@
 <div class="container banner-main">
   <div class="banner banner-radius">
     {% if section.settings.banner != blank %}
-      {{ section.settings.banner | image_url: width: 1440, height: 500 | image_tag: class: 'banner-image' }}
+      {{ section.settings.banner | image_url: width: 1440, height: 410 | image_tag: class: 'banner-image' }}
     {% endif %}
   </div>
   {% for block in section.blocks %}
