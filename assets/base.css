@@ -3707,6 +3707,7 @@ details-disclosure > details {
 }
 .hamburger {
   display: none;
+  cursor: pointer;
 }
 .menu {
   display: flex;
