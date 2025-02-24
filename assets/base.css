@@ -3883,6 +3883,7 @@ details-disclosure > details {
   border-radius: 14px;
   opacity: 1;
   max-width: 100%;
+  height: auto;
 }
 .product-image-2 {
   position: absolute;
