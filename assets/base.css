@@ -4183,4 +4183,7 @@ details-disclosure > details {
   }
 }
 @media (max-width: 380px) {
+  .post-heading {
+    font-size: 14px;
+  }
 }
