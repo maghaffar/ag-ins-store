@@ -3916,6 +3916,10 @@ details-disclosure > details {
 
   width: 31%;
 }
+.article-image {
+  width: 100%;
+  height: 100%;
+}
 .article-title {
   margin: 0;
 }
