@@ -151,7 +151,7 @@
         "type": "footer",
         "settings": {
           "footer_logo": "shopify://shop_images/logo-70.svg",
-          "newsletter_text": "Subscribe To Our Newsletter",
+          "newsletter_text": "Subscribe To Our Newsletter to stay updated",
           "background-color": "#3d3d3d",
           "footer": "footer",
           "copyright_text": "Copyright © 2023 Renew Bariatrics, Inc"
