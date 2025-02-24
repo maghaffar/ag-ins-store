@@ -3778,6 +3778,9 @@ details-disclosure > details {
 .cart-drawer.open {
   right: 0;
 }
+.cart-open {
+  cursor: pointer;
+}
 .border-bottom {
   border-bottom: 2px solid black;
 }
