@@ -63,7 +63,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hamburger.addEventListener("click", toggleSidebar);
   closeButton.addEventListener("click", toggleSidebar);
-
+  
+  // Cart Drawer Toggle
+  const cartButton = document.querySelector(".cartOpen");
+  const cartDrawer = document.querySelector(".cart-drawer");
+  const closeCart = document.querySelector(".cartClose");
+  
+function toggleCart() {
+    cartDrawer.classList.toggle("open");
+  }
+  
+    cartButton.addEventListener("click", toggleCart);
+  closeCart.addEventListener("click", toggleCart);
+  
   // Footer List Toggle
  document.querySelectorAll(".footer-menu").forEach(title => {
     title.addEventListener("click", function () {
