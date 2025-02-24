@@ -4057,4 +4057,7 @@ details-disclosure > details {
   .product {
     width: 48%;
   }
+  .suggested-article {
+    width: 47%;
+  }
 }
