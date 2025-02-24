@@ -4033,6 +4033,7 @@ details-disclosure > details {
 .footer-main {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
   margin-top: 100px;
   padding: 0 100px;
@@ -4040,7 +4041,7 @@ details-disclosure > details {
 .footer-menu {
   display: flex;
   flex-direction: column;
-  width: 160px;
+  width: 100%;
 }
 .footer-list {
   list-style: none;
@@ -4143,6 +4144,9 @@ details-disclosure > details {
   }
 }
 @media (min-width: 732px) {
+  .footer-main {
+    flex-wrap: nowrap;
+  }
   .footer-menu-title {
     cursor: default;
   }
@@ -4152,6 +4156,9 @@ details-disclosure > details {
   .footer-list {
     max-height: none;
     overflow: visible;
+  }
+  .footer-menu {
+    width: 160px;
   }
 }
 @media (max-width: 480px) {
