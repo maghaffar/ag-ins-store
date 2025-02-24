@@ -4054,4 +4054,7 @@ details-disclosure > details {
   .post-heading {
     font-size: 32px;
   }
+  .product {
+    width: 48%;
+  }
 }
