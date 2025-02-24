@@ -155,7 +155,7 @@
     <div class="cart-items">
       {% if cart != empty %}
         {% for item in cart.items %}
-          <div class="cart-item">
+          <div class="cart-drawer-item">
             {{ item.image | image_url: width: 100 | image_tag: class: 'cart-item-image' }}
             <div class="cart-item-details">
               <h4>{{ item.product_title }}</h4>
