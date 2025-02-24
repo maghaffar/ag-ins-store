@@ -4041,7 +4041,6 @@ details-disclosure > details {
 .footer-menu {
   display: flex;
   flex-direction: column;
-
   width: 160px;
 }
 .footer-list {
