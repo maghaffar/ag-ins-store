@@ -195,39 +195,6 @@
       "settings": {
         "background-color": "#666666"
       }
-    },
-    "newsletter_KCa9XC": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_N7C6Li": {
-          "type": "heading",
-          "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
-          }
-        },
-        "paragraph_TY6jfP": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
-          }
-        },
-        "email_form_afm8eK": {
-          "type": "email_form",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "heading_N7C6Li",
-        "paragraph_TY6jfP",
-        "email_form_afm8eK"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -235,7 +202,6 @@
     "banner_3JNLpR",
     "blog_content_BDcYdL",
     "suggested_posts_b8rGPV",
-    "partners_9CdPLn",
-    "newsletter_KCa9XC"
+    "partners_9CdPLn"
   ]
 }
