@@ -3705,6 +3705,9 @@ details-disclosure > details {
   padding-top: 40px;
   padding-bottom: 40px;
 }
+.hamburger {
+  display: none;
+}
 .menu {
   display: flex;
   align-items: center;
@@ -4073,6 +4076,12 @@ details-disclosure > details {
   }
   .footer-main {
     display: none;
+  }
+  .logo {
+    display: none;
+  }
+  .hamburger {
+    display: block;
   }
 }
 @media (max-width: 480px) {
