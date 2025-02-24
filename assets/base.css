@@ -3927,6 +3927,7 @@ details-disclosure > details {
   padding: 30px 0;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .partner-svg-wrapper {
   display: inline-flex;
