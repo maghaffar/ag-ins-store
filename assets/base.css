@@ -4066,3 +4066,11 @@ details-disclosure > details {
     padding: 0 40px;
   }
 }
+@media (max-width: 480px) {
+  .menu {
+    display: none;
+  }
+  .footer-main {
+    display: none;
+  }
+}
