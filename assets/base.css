@@ -4033,3 +4033,10 @@ details-disclosure > details {
   padding: 20px 0;
   margin-top: 40px;
 }
+
+@media (max-width: 1024px) {
+  body {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
