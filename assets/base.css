@@ -4119,9 +4119,9 @@ details-disclosure > details {
   .menu {
     display: none;
   }
-  .footer-main {
+  /* .footer-main {
     display: none;
-  }
+  } */
   .logo {
     display: none;
   }
