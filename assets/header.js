@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   // Sidebar Toggling
    const hamburger = document.querySelector(".hamburger");
+  const sidebar = document.querySelector(".sidebar");
   const closeButton = document.querySelector(".sidebar-close");
 
   function toggleSidebar() {
