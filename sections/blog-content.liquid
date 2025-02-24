@@ -1,40 +1,42 @@
 <div class="container post-content">
-{% for block in section.blocks %}
+  {% for block in section.blocks %}
     {% case block.type %}
-      {% when "paragraph" %}
+      {% when 'paragraph' %}
         <div class="align-{{ block.settings.text-alignment }} paragraph">
-            {{ block.settings.paragraph }}
+          {{ block.settings.paragraph }}
         </div>
-    {% when "sub_heading" %}
+      {% when 'sub_heading' %}
         <h3 class="sub-heading">
-            {{ block.settings.sub-heading }}
+          {{ block.settings['sub-heading'] }}
         </h3>
-    {% when "featured_products" %}
-      <div class="featured-products">
-        {% for product in block.settings.featured-products %}
+      {% when 'featured_products' %}
+        <div class="featured-products">
+          {% for product in block.settings['featured-products'] %}
             <div class="product">
-                <a class="link images" href="{{ product.url }}">
-                    {{ product | image_url: width: 300 | image_tag: class: "product-image" }}
+              <a class="link images" href="{{ product.url }}">
+                {{ product | image_url: width: 500 | image_tag: class: 'product-image' }}
                 {% if product.images.size > 1 %}
-                    {% assign lastProductImage = product.images | last %}
-                    {{  lastProductImage | image_url: width: 300 | image_tag: class: "product-image product-image-2" }}
+                  {% assign lastProductImage = product.images | last %}
+                  {{ lastProductImage | image_url: width: 500 | image_tag: class: 'product-image product-image-2' }}
                 {% endif %}
-            </a>
-                <div class="align-{{ block.settings.prod-title-alignment }}">{{ product.title | link_to: product.url, class: "link product-title" }}</div>
-                <div class="price-main">
-                    <div>
-                       <span class="prev-price">{{ product.compare_at_price | money_without_trailing_zeros }} </span>
-                       <span class="price">{{ product.price | money_without_trailing_zeros }}</span>
-                    </div>
-                    <button class="add-to-cart">{{ 'add-to-cart.svg' | inline_asset_content }}</button>
+              </a>
+              <div class="align-{{ block.settings.prod-title-alignment }}">
+                {{ product.title | link_to: product.url, class: 'link product-title' }}
+              </div>
+              <div class="price-main">
+                <div>
+                  <span class="prev-price">{{ product.compare_at_price | money_without_trailing_zeros }} </span>
+                  <span class="price">{{ product.price | money_without_trailing_zeros }}</span>
                 </div>
-            </div>   
-        {% endfor %}
-      </div>
+                <button class="add-to-cart">{{ 'add-to-cart.svg' | inline_asset_content }}</button>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
       {% else %}
-        
+
     {% endcase %}
-{% endfor %}
+  {% endfor %}
 </div>
 {% schema %}
 {
