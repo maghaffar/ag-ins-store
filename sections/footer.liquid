@@ -5,6 +5,7 @@
   }
 </style>
 <div class="footer">
+  {{- 'icon-error.svg' | inline_asset_content -}}
   <div class="newsletter">
     {% if section.settings.footer_logo != blank %}
       {{ section.settings.footer_logo | image_url: width: 96, height: 55 | image_tag }}
