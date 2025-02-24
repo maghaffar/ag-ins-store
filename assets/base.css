@@ -3783,7 +3783,7 @@ details-disclosure > details {
 }
 .cart-drawer-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   padding: 10px;
   border-bottom: 1px solid #ddd;
@@ -3805,9 +3805,9 @@ details-disclosure > details {
   justify-content: space-around;
 }
 
-button {
+.cart-items button {
   background: none;
-  border: 1px solid #000;
+  border: none;
   padding: 5px 10px;
   cursor: pointer;
 }
