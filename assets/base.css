@@ -4062,4 +4062,7 @@ details-disclosure > details {
   .menu {
     gap: 20px;
   }
+  .footer-main {
+    padding: 0 40px;
+  }
 }
