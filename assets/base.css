@@ -3766,7 +3766,6 @@ details-disclosure > details {
   gap: 10px;
 }
 .banner {
-  max-height: 350px;
   overflow: hidden;
   position: relative;
 }
