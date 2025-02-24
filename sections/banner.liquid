@@ -1,37 +1,37 @@
 <style>
-  .banner-radius{
-    border-radius: {{
-      section.settings.border-radius
-    }}px
+    .banner-radius{
+      border-radius: {{
+        section.settings.border-radius
+      }}px
+    }
+    .post-heading{
+    color: {{ section.settings.heading_color }}
   }
-  .post-heading{
-  color: {{ section.settings.heading_color }}
-}
 </style>
 
 <div class="container banner-main">
   <div class="banner banner-radius">
     {% if section.settings.banner != blank %}
-      {{ section.settings.banner | image_url: width: 1440, height: 410 | image_tag: class: 'banner-image' }}
+      {{ section.settings.banner | image_url: width: 1440, height: 500 | image_tag: class: 'banner-image' }}
     {% endif %}
   </div>
   {% for block in section.blocks %}
     {% case block.type %}
-    {% when "heading" %}
-      {% unless block.settings.centered_heading %}
-        <h1 class="post-heading">{{ block.settings.heading }}</h1>
-      {% else %}
-        <h1 class="post-heading centered-heading">{{ block.settings.heading }}</h1>
-      {% endunless %}
-    {% when "author" %}
-      <div class="author">
-        {% if block.settings.author-image != blank %}
-            {{ block.settings.author-image | image_url: width: 40, height: 40 | image_tag: class: "author-image"  }}
-        {% endif %}
-        {{ block.settings.author-name }}
-        {{ 'dot.svg' | inline_asset_content }}
-        {{ block.settings.published-at }}
-    </div>
+      {% when 'heading' %}
+        {% unless block.settings.centered_heading %}
+          <h1 class="post-heading">{{ block.settings.heading }}</h1>
+        {% else %}
+          <h1 class="post-heading centered-heading">{{ block.settings.heading }}</h1>
+        {% endunless %}
+      {% when 'author' %}
+        <div class="author">
+          {% if block.settings['author-image'] != blank %}
+            {{ block.settings['author-image'] | image_url: width: 40, height: 40 | image_tag: class: 'author-image' }}
+          {% endif %}
+          {{ block.settings['author-name'] }}
+          {{ 'dot.svg' | inline_asset_content }}
+          {{ block.settings['published-at'] }}
+        </div>
     {% endcase %}
   {% endfor %}
 </div>
