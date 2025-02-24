@@ -4043,3 +4043,12 @@ details-disclosure > details {
     width: 31%;
   }
 }
+@media (max-width: 768px) {
+  .banner {
+    max-height: 190px;
+  }
+  .centered-heading {
+    top: 28%;
+    left: 18%;
+  }
+}
