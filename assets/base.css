@@ -4181,6 +4181,10 @@ details-disclosure > details {
   .paragraph {
     font-size: 16px;
   }
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 @media (max-width: 380px) {
   .post-heading {
