@@ -42,6 +42,7 @@
                   >
                   <button class="add-to-cart" type="submit" name="add">
                     {{ 'add-to-cart.svg' | inline_asset_content }}
+                    {%- render 'loading-spinner' -%}
                   </button>
                 {% endform %}
               </div>
