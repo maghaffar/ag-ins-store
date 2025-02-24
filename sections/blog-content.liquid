@@ -28,7 +28,9 @@
                   <span class="prev-price">{{ product.compare_at_price | money_without_trailing_zeros }} </span>
                   <span class="price">{{ product.price | money_without_trailing_zeros }}</span>
                 </div>
-                <button class="add-to-cart">{{ 'add-to-cart.svg' | inline_asset_content }}</button>
+                {% form 'product', product %}
+                  <button class="add-to-cart">{{ 'add-to-cart.svg' | inline_asset_content }}</button>
+                {% endform %}
               </div>
             </div>
           {% endfor %}
