@@ -3761,6 +3761,23 @@ details-disclosure > details {
   position: static;
   background-color: white;
 }
+
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.cart-drawer.open {
+  right: 0;
+}
 .border-bottom {
   border-bottom: 2px solid black;
 }
