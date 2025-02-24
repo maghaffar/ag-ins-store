@@ -4079,6 +4079,10 @@ details-disclosure > details {
   line-height: 22.73px;
   color: white;
 }
+.footer-menu .svg-wrapper {
+  width: 15px;
+  height: 15px;
+}
 .copyright {
   text-align: center;
   border-top: 1px solid white;
