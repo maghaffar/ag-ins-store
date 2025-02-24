@@ -3781,7 +3781,7 @@ details-disclosure > details {
 .cart-open {
   cursor: pointer;
 }
-.cart-item {
+.cart-drawer-item {
   display: flex;
   align-items: center;
   gap: 10px;
