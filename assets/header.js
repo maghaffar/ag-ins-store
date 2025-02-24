@@ -52,4 +52,15 @@ document.addEventListener("DOMContentLoaded", function () {
             document.querySelectorAll(".svg-wrapper").forEach(svg => svg.classList.remove("rotate"));
         }
     });
+  // Sidebar Toggling
+   const hamburger = document.querySelector(".hamburger");
+  const sidebar = document.querySelector(".sidebar");
+  const closeButton = document.querySelector(".sidebar-close");
+
+  function toggleSidebar() {
+    sidebar.classList.toggle("open");
+  }
+
+  hamburger.addEventListener("click", toggleSidebar);
+  closeButton.addEventListener("click", toggleSidebar);
 });
