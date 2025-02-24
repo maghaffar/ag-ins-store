@@ -3813,6 +3813,9 @@ details-disclosure > details {
 }
 .banner-main {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner-image {
   width: 100%;
@@ -3822,8 +3825,10 @@ details-disclosure > details {
 .centered-heading {
   margin-top: 0;
   position: absolute;
-  top: 33%;
-  left: 33%;
+  /* top: 33%;
+  left: 33%; */
+  top: 0;
+  left: 0;
 }
 .post-content {
   margin-top: 10px;
