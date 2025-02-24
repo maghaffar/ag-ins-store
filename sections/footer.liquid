@@ -24,7 +24,9 @@
           {{ form.errors.messages.email -}}
         {% endif %}
         {% if form.posted_successfully? %}
-          {{ 'You have successfuly subscribed to our newsletter' }}
+          <div class="newsletter-form__message newsletter-form__message--success form__message">
+            {{ 'You have successfuly subscribed to our newsletter' }}
+          </div>
         {% endif %}
       </div>
     {% endform %}
