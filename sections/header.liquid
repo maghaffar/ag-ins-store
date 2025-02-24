@@ -7,73 +7,80 @@
       {{ settings.logo | image_url: width: 50 | image_tag }}
     {% endif %}
   </a>
+
+  <!-- Hamburger -->
   <div class="hamburger">
     {{ 'hamburger-menu.svg' | inline_asset_content }}
   </div>
 
-  <!-- Menu -->
-  <div class="menu">
-    {% if section.settings.menu != blank %}
-      {% for link in section.settings.menu.links %}
-        <!-- If link has nested links -->
-        {% if link.links != blank %}
-          <div class="menu-item">
-            <!-- Link Title -->
-            <div class="menu-title menu-text">
-              {{ link.title }}
-              <span class="svg-wrapper">
-                {{- 'icon-caret.svg' | inline_asset_content -}}
-              </span>
-            </div>
-            <!-- Child Links -->
-            <div class="submenu">
-              <ul class="submenu-list">
-                {% for childlink in link.links %}
-                  <li>
-                    {% if childlink.links == blank %}
-                      <a class="link menu-text" href="{{ childlink.url }}">
-                        {{ childlink.title }}
-                      </a>
-                    {% else %}
-                      <!-- If childlink has nested links -->
-                      <div class="submenu-item">
-                        <!-- ChildLink Title -->
-                        <div class="submenu-title menu-text">
-                          {{ childlink.title }}
-                          <span class="svg-wrapper">
-                            {{- 'icon-caret.svg' | inline_asset_content -}}
-                          </span>
-                        </div>
-                        <!-- Nested Links -->
-                        <div class="nested-submenu">
-                          <ul class="submenu-list">
-                            {% for subchildlink in childlink.links %}
-                              <li>
-                                <a class="link menu-text" href="{{ subchildlink.url }}">{{ subchildlink.title }}</a>
-                              </li>
-                            {% endfor %}
-                          </ul>
-                        </div>
-                      </div>
-                    {% endif %}
-                  </li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        {% else %}
-          <a class="link menu-text" href="{{ link.url }}">
-            {{ link.title }}
-          </a>
+  <!-- Sidebar (Mobile Menu) -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <a href="{{ routes.root_url }}" class="sidebar-logo">
+        {% if settings.logo != blank %}
+          {{ settings.logo | image_url: width: 50 | image_tag }}
         {% endif %}
-      {% endfor %}
-    {% endif %}
+      </a>
+      <div class="sidebar-close">&times;</div>
+    </div>
+
+    <div class="menu">
+      {% if section.settings.menu != blank %}
+        {% for link in section.settings.menu.links %}
+          {% if link.links != blank %}
+            <div class="menu-item">
+              <div class="menu-title menu-text">
+                {{ link.title }}
+                <span class="svg-wrapper">
+                  {{- 'icon-caret.svg' | inline_asset_content -}}
+                </span>
+              </div>
+              <div class="submenu">
+                <ul class="submenu-list">
+                  {% for childlink in link.links %}
+                    <li>
+                      {% if childlink.links == blank %}
+                        <a class="link menu-text" href="{{ childlink.url }}">
+                          {{ childlink.title }}
+                        </a>
+                      {% else %}
+                        <div class="submenu-item">
+                          <div class="submenu-title menu-text">
+                            {{ childlink.title }}
+                            <span class="svg-wrapper">
+                              {{- 'icon-caret.svg' | inline_asset_content -}}
+                            </span>
+                          </div>
+                          <div class="nested-submenu">
+                            <ul class="submenu-list">
+                              {% for subchildlink in childlink.links %}
+                                <li>
+                                  <a class="link menu-text" href="{{ subchildlink.url }}">{{ subchildlink.title }}</a>
+                                </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                        </div>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {% else %}
+            <a class="link menu-text" href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
   </div>
-  <!-- Cart -->
+
+  <!-- Cart & Icons -->
   <div class="header-icons">
     <div class="user-menu">
       {{ 'user.svg' | inline_asset_content }}
-
       <div class="svg-wrapper">
         {{- 'icon-caret.svg' | inline_asset_content -}}
       </div>
