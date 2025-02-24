@@ -12,7 +12,7 @@
     <p class="newsletter-text">{{ section.settings.newsletter_text }}</p>
     {% form 'customer' %}
       <div class="newsletter-form">
-        <input class="newsletter-input" type="email" name="email" placeholder="person@email.com">
+        <input class="newsletter-input" type="email" name="contact[email]" placeholder="person@email.com">
         <button class="email-submit">{{ 'chevron-down.svg' | inline_asset_content }}</button>
       </div>
     {% endform %}
