@@ -142,13 +142,15 @@
         {{- 'icon-caret.svg' | inline_asset_content -}}
       </div>
     </div>
-    {{ 'icon-cart2.svg' | inline_asset_content: class: 'cartOpen' }}
+    <div class="cart-open">
+      {{ 'icon-cart2.svg' | inline_asset_content }}
+    </div>
   </div>
 
   <div class="cart-drawer">
     <div class="sidebar-header">
       {{ 'Your Cart' }}
-      <div class="sidebar-close">&times;</div>
+      <div class="cart-close">&times;</div>
     </div>
   </div>
 </div>
