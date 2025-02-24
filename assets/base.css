@@ -3690,10 +3690,7 @@ details-disclosure > details {
   }
 }
 /* MY CSS FOR POST PAGE */
-@font-face {
-  font-family: "Oxygen";
-  src: url("/assets/Oxygen-Light.ttf");
-}
+
 .container {
   max-width: 1240px;
   margin: 0 auto;
