@@ -3810,13 +3810,12 @@ details-disclosure > details {
 }
 .banner {
   overflow: hidden;
-}
-.banner-main {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .banner-image {
   width: 100%;
   height: 100%;
