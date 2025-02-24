@@ -29,6 +29,17 @@
                   <span class="price">{{ product.price | money_without_trailing_zeros }}</span>
                 </div>
                 {% form 'product', product %}
+                  <input
+                    type="hidden"
+                    name="id"
+                    value="{{ product.selected_or_first_available_variant.id }}"
+                    {% if product.selected_or_first_available_variant.available == false
+                      or product.selected_or_first_available_variant == null
+                    %}
+                      disabled
+                    {% endif %}
+                    class="product-variant-id"
+                  >
                   <button class="add-to-cart" type="submit" name="add">
                     {{ 'add-to-cart.svg' | inline_asset_content }}
                   </button>
