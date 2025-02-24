@@ -3790,7 +3790,7 @@ details-disclosure > details {
 }
 
 .cart-item-image {
-  width: 50px;
+  width: 130px;
   height: auto;
   border-radius: 5px;
 }
@@ -3802,7 +3802,7 @@ details-disclosure > details {
 .quantity {
   display: flex;
   align-items: center;
-  gap: 5px;
+  justify-content: space-around;
 }
 
 button {
