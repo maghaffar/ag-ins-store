@@ -4182,6 +4182,9 @@ details-disclosure > details {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .footer-main {
+    padding: 0 30px;
+  }
 }
 @media (max-width: 380px) {
   .post-heading {
