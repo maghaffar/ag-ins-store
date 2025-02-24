@@ -3811,6 +3811,9 @@ details-disclosure > details {
   padding: 5px 10px;
   cursor: pointer;
 }
+.cart-item p {
+  margin: 0;
+}
 
 .border-bottom {
   border-bottom: 2px solid black;
