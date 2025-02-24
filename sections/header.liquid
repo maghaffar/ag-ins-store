@@ -133,7 +133,6 @@
       {% endif %}
     </div>
   </div>
-
   <!-- Cart -->
   <div class="header-icons">
     <div class="user-menu">
@@ -143,8 +142,10 @@
         {{- 'icon-caret.svg' | inline_asset_content -}}
       </div>
     </div>
-    {{ 'icon-cart2.svg' | inline_asset_content }}
+    {{ 'icon-cart2.svg' | inline_asset_content: class: 'cartOpen' }}
   </div>
+
+  <div class="cart-drawer"></div>
 </div>
 
 {% schema %}
