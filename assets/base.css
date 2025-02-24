@@ -4085,6 +4085,11 @@ details-disclosure > details {
   .product {
     width: 31%;
   }
+  .centered-heading {
+    position: absolute;
+    top: 32%;
+    left: 22%;
+  }
 }
 @media (max-width: 768px) {
   .banner {
