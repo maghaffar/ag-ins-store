@@ -4046,9 +4046,19 @@ details-disclosure > details {
 .footer-list {
   list-style: none;
   padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
 .footer-list li {
   margin-bottom: 5px;
+}
+.footer-menu.open .footer-list {
+  max-height: 500px;
+}
+
+.footer-menu.open .caret-icon {
+  transform: rotate(180deg);
 }
 .footer-menu-title {
   font-family: "Oxygen";
@@ -4057,6 +4067,10 @@ details-disclosure > details {
   line-height: 22.73px;
   color: #9a9a9a;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 .footer-menu-text {
   font-family: "Oxygen";
@@ -4127,6 +4141,18 @@ details-disclosure > details {
   }
   .hamburger {
     display: block;
+  }
+}
+@media (min-width: 732px) {
+  .footer-menu-title {
+    cursor: default;
+  }
+  .caret-icon {
+    display: none;
+  }
+  .footer-list {
+    max-height: none;
+    overflow: visible;
   }
 }
 @media (max-width: 480px) {

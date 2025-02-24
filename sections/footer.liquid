@@ -39,7 +39,12 @@
       {% for link in section.settings.footer.links %}
         {% if link.links != blank %}
           <div class="footer-menu">
-            <p class="footer-menu-title">{{ link.title }}</p>
+            <p class="footer-menu-title" data-toggle>
+              {{ link.title }}
+              <span class="caret-icon">
+                {{- 'icon-caret.svg' | inline_asset_content -}}
+              </span>
+            </p>
             <ul class="footer-list">
               {% for childlink in link.links %}
                 <li>
@@ -52,6 +57,7 @@
       {% endfor %}
     {% endif %}
   </div>
+
   <div class="copyright">
     {{ section.settings.copyright_text }}
   </div>
