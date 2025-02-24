@@ -4059,4 +4059,7 @@ details-disclosure > details {
   .suggested-article {
     width: 47%;
   }
+  .menu {
+    gap: 20px;
+  }
 }
