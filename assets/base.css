@@ -4073,4 +4073,10 @@ details-disclosure > details {
   .footer-main {
     display: none;
   }
+  .product {
+    width: 100%;
+  }
+  .suggested-article {
+    width: 100%;
+  }
 }
