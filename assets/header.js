@@ -65,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function () {
   closeButton.addEventListener("click", toggleSidebar);
   
   // Cart Drawer Toggle
-  const cartButton = document.querySelector(".cartOpen");
+  const cartButton = document.querySelector(".cart-open");
   const cartDrawer = document.querySelector(".cart-drawer");
-  const closeCart = document.querySelector(".cartClose");
+  const closeCart = document.querySelector(".cart-close");
   
 function toggleCart() {
     cartDrawer.classList.toggle("open");
