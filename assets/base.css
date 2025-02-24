@@ -3758,6 +3758,7 @@ details-disclosure > details {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  padding-top: 10px;
 }
 .border-bottom {
   border-bottom: 2px solid black;
