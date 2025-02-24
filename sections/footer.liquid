@@ -15,6 +15,18 @@
         <input class="newsletter-input" type="email" name="contact[email]" placeholder="person@email.com">
         <button class="email-submit" type="submit">{{ 'chevron-down.svg' | inline_asset_content }}</button>
       </div>
+      <div>
+        {% if form.errors %}
+          <span class="svg-wrapper">
+            {{- 'icon-error.svg' | inline_asset_content -}}
+          </span>
+          {{- form.errors.translated_fields.email | capitalize }}
+          {{ form.errors.messages.email -}}
+        {% endif %}
+        {% if form.posted_successfully? %}
+          {{ 'You have successfuly subscribed to our newsletter' }}
+        {% endif %}
+      </div>
     {% endform %}
   </div>
   <div class="footer-main">
