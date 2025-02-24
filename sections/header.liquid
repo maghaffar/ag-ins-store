@@ -160,7 +160,7 @@
             <div class="cart-item-details">
               <h4>{{ item.product_title }}</h4>
               <p>
-                <strong>{{ item.final_line_price | divided_by: 100 | money }}</strong>
+                <strong>{{ item.final_line_price | money }}</strong>
               </p>
               {% if item.options_with_values != empty %}
                 {% for option in item.options_with_values %}
