@@ -3810,6 +3810,8 @@ details-disclosure > details {
 }
 .banner {
   overflow: hidden;
+}
+.banner-main {
   position: relative;
 }
 .banner-image {
