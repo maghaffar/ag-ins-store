@@ -4051,4 +4051,7 @@ details-disclosure > details {
     top: 28%;
     left: 18%;
   }
+  .post-heading {
+    font-size: 32px;
+  }
 }
