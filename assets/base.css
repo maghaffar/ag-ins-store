@@ -3762,7 +3762,7 @@ details-disclosure > details {
   background-color: white;
 }
 
-.cart-drawer {
+/* .cart-drawer {
   position: fixed;
   top: 0;
   right: -100%;
@@ -3816,7 +3816,7 @@ details-disclosure > details {
   border: none;
   padding: 5px 10px;
   cursor: pointer;
-}
+} */
 
 .border-bottom {
   border-bottom: 2px solid black;
