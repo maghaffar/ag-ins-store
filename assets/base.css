@@ -3593,7 +3593,7 @@ details-disclosure > details {
 
 /* Loading spinner */
 .loading__spinner {
-  position: absolute;
+  /* position: absolute; */
   z-index: 1;
   width: 1.8rem;
 }
