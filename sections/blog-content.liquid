@@ -31,40 +31,42 @@
                   <span class="prev-price">{{ product.compare_at_price | money_without_trailing_zeros }} </span>
                   <span class="price">{{ product.price | money_without_trailing_zeros }}</span>
                 </div>
-                {% form 'product',
-                  product,
-                  novalidate: 'novalidate',
-                  class: 'form',
-                  id: product_form_id,
-                  data-type: 'add-to-cart-form'
-                %}
-                  <input
-                    type="hidden"
-                    name="id"
-                    value="{{ product.selected_or_first_available_variant.id }}"
-                    {% if product.selected_or_first_available_variant.available == false
-                      or product.selected_or_first_available_variant == null
-                    %}
-                      disabled
-                    {% endif %}
-                    class="product-variant-id"
-                  >
+                <product-form class="product-form">
+                  {% form 'product',
+                    product,
+                    novalidate: 'novalidate',
+                    class: 'form',
+                    id: product_form_id,
+                    data-type: 'add-to-cart-form'
+                  %}
+                    <input
+                      type="hidden"
+                      name="id"
+                      value="{{ product.selected_or_first_available_variant.id }}"
+                      {% if product.selected_or_first_available_variant.available == false
+                        or product.selected_or_first_available_variant == null
+                      %}
+                        disabled
+                      {% endif %}
+                      class="product-variant-id"
+                    >
 
-                  <button
-                    id="ProductSubmitButton-{{ section.id }}"
-                    type="submit"
-                    name="add"
-                    class="product-form__submit add-to-cart"
-                    {% if product.selected_or_first_available_variant.available == false
-                      or product.selected_or_first_available_variant == null
-                    %}
-                      disabled
-                    {% endif %}
-                  >
-                    {{ 'add-to-cart.svg' | inline_asset_content }}
-                    {%- render 'loading-spinner' -%}
-                  </button>
-                {% endform %}
+                    <button
+                      id="ProductSubmitButton-{{ section.id }}"
+                      type="submit"
+                      name="add"
+                      class="product-form__submit add-to-cart"
+                      {% if product.selected_or_first_available_variant.available == false
+                        or product.selected_or_first_available_variant == null
+                      %}
+                        disabled
+                      {% endif %}
+                    >
+                      {{ 'add-to-cart.svg' | inline_asset_content }}
+                      {%- render 'loading-spinner' -%}
+                    </button>
+                  {% endform %}
+                </product-form>
               </div>
             </div>
           {% endfor %}
