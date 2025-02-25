@@ -15,7 +15,6 @@
       {% when 'featured_products' %}
         <div class="featured-products">
           {% for product in block.settings['featured-products'] %}
-            {{ product | json }}
             <div class="blog-product">
               <a class="link images" href="{{ product.url }}">
                 {{ product | image_url: width: 500 | image_tag: class: 'product-image' }}
