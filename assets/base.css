@@ -3856,6 +3856,7 @@ details-disclosure > details {
 
 .header-icons {
   display: flex;
+  align-items: center;
   gap: 40px;
 }
 .user-menu {
