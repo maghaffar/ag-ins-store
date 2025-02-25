@@ -10,7 +10,8 @@
 </style>
 
 <div class="container banner-main">
-  <div class="banner banner-radius">
+  {% assign heading_block = section.blocks | where: "type", "heading" | first %}
+  <div class="banner banner-radius {% if heading_block %} {{ heading_block.settings.heading_alignment }} {% endif %}">
     {% if section.settings.banner != blank %}
       {{ section.settings.banner | image_url: width: 1440, height: 410 | image_tag: class: 'banner-image' }}
     {% endif %}
