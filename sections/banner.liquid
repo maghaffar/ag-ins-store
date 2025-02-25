@@ -21,7 +21,7 @@
         {% unless block.settings.centered_heading %}
           <h1 class="post-heading">{{ block.settings.heading }}</h1>
         {% else %}
-          <h1 class="post-heading centered-heading">{{ block.settings.heading }}</h1>
+          <h1 class="post-heading banner-heading {{  }}">{{ block.settings.heading }}</h1>
         {% endunless %}
       </div>
       {% when 'author' %}
@@ -77,9 +77,52 @@
           {
             "type": "checkbox",
             "id": "centered_heading",
-            "label": "Centered in Banner",
+            "label": "Show Heading in Banner",
             "default": false
           },
+        {
+          "type":"select",
+          "id": "heading_alignment",
+          "label":"Heading Alignment",
+          "options":[
+            {
+              "value": "top-left",
+      "label": "Top Left"
+            },
+                        {
+              "value": "center-left",
+      "label": "Center Left"
+            },
+                        {
+              "value": "bottom-left",
+      "label": "Bottom Left"
+            },
+                        {
+              "value": "top-center",
+      "label": "Top Center"
+            },
+                        {
+              "value": "center-center",
+      "label": "Center Center"
+            },
+                        {
+              "value": "bottom-center",
+      "label": "Bottom Center"
+            },
+                        {
+              "value": "top-right",
+      "label": "Top Right"
+            },
+                        {
+              "value": "center-right",
+      "label": "Center Right"
+            },
+                        {
+              "value": "bottom-right",
+      "label": "Bottom Right"
+            }
+          ]
+        }
       ]
   },
   {
