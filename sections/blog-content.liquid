@@ -52,7 +52,7 @@
                       class="product-variant-id"
                     >
 
-                    {% if product.variants.size > 1 %}
+                    {% if product.variants.size == 1 %}
                       <button
                         id="ProductSubmitButton-{{ section.id }}"
                         type="submit"
