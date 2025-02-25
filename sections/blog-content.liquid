@@ -54,9 +54,7 @@
                       disabled
                     {% endif %}
                   >
-                    <span>
-                      {{ 'add-to-cart.svg' | inline_asset_content }}
-                    </span>
+                    {{ 'add-to-cart.svg' | inline_asset_content }}
                     {%- render 'loading-spinner' -%}
                   </button>
                 {% endform %}
