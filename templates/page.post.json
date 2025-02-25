@@ -24,7 +24,7 @@
           "settings": {
             "heading": "This is the Heading of the Blog",
             "centered_heading": true,
-            "heading_alignment": "top-right"
+            "heading_alignment": "top-left"
           }
         },
         "author_Fmatgf": {
