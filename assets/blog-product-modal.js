@@ -7,7 +7,8 @@
     const modal = document.getElementById(`productModal-${id}`);
       modal.style.display = "block";
     };
-  function closeModal () {
+  function closeModal (id) {
+    const modal = document.getElementById(`productModal-${id}`);
       modal.style.display = "none";
     };
   
