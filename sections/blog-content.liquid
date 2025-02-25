@@ -46,6 +46,23 @@
                     {{ 'add-to-cart.svg' | inline_asset_content }}
                     {%- render 'loading-spinner' -%}
                   </button>
+                  <button
+                    id="ProductSubmitButton-{{ section.id }}"
+                    type="submit"
+                    name="add"
+                    class="product-form__submit button button--full-width button--primary"
+                    {% if product.selected_or_first_available_variant.available == false
+                      or quantity_rule_soldout
+                      or product.selected_or_first_available_variant == null
+                    %}
+                      disabled
+                    {% endif %}
+                  >
+                    <span>
+                      {{ 'add-to-cart.svg' | inline_asset_content }}
+                    </span>
+                    {%- render 'loading-spinner' -%}
+                  </button>
                 {% endform %}
               </div>
             </div>
