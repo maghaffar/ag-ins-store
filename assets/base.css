@@ -4243,6 +4243,9 @@ details-disclosure > details {
   .footer-main {
     padding: 0 30px;
   }
+  .banner-radius {
+    border-radius: 10px;
+  }
 }
 @media (max-width: 380px) {
   .post-heading {
