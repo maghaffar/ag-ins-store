@@ -1,7 +1,6 @@
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'blog-product-modal.js' | asset_url }}" defer="defer"></script>
 <div class="container post-content">
-  {%- assign product_form_id = 'product-form-' | append: section.id -%}
   {% for block in section.blocks %}
     {% case block.type %}
       {% when 'paragraph' %}
@@ -15,6 +14,7 @@
       {% when 'featured_products' %}
         <div class="featured-products">
           {% for product in block.settings['featured-products'] %}
+            {% assign product_form_id = 'product-form-' | append: product.id %}
             <div class="blog-product">
               <a class="link images" href="{{ product.url }}">
                 {{ product | image_url: width: 500 | image_tag: class: 'product-image' }}
