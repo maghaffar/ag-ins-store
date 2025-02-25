@@ -36,7 +36,7 @@
       <input type="number" id="quantity" value="1" min="1">
       <button onclick="increaseQuantity()">+</button>
     </div>
-    {% render 'product-variant-picker', product: product, product_form_id: product_form_id %}
+
     {%- render 'buy-buttons',
       product: product,
       product_form_id: product_form_id,
