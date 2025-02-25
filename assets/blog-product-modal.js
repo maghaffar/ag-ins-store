@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+// document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("productModal");
   const btn = document.getElementById("openModalBtn");
   const closeBtn = document.getElementById("closeModal"); 
@@ -20,4 +20,4 @@ document.addEventListener("DOMContentLoaded", function () {
   //     }
   //   };
   // }
-});
+// });
