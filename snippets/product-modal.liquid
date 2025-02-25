@@ -1,4 +1,4 @@
-<div id="productModal" class="product-modal">
+<div id="productModal-{{ product.id }}" class="product-modal">
   <div class="modal-content">
     <span class="close" id="closeModal" onclick="closeModal()">&times;</span>
 
@@ -38,7 +38,6 @@
     </div>
 
     {%- render 'buy-buttons',
-      block: block,
       product: product,
       product_form_id: product_form_id,
       section_id: section.id,
