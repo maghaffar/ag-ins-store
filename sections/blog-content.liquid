@@ -16,7 +16,7 @@
         <div class="featured-products">
           {% for product in block.settings['featured-products'] %}
             <script>
-              console.log({{product}})
+              console.log("{{product}}")
             </script>
             <div class="blog-product">
               <a class="link images" href="{{ product.url }}">
