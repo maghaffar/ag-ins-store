@@ -4028,6 +4028,11 @@ details-disclosure > details {
   background-color: transparent;
   cursor: pointer;
 }
+.open-product-modal {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 .section-heading {
   font-family: "Exo";
   font-weight: 500;
