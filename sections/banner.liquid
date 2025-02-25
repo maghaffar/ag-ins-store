@@ -11,7 +11,7 @@
 
 <div class="container banner-main">
   {% assign heading_block = section.blocks | where: "type", "heading" | first %}
-  <div class="banner banner-radius {% if block.settings.centered_heading %}flex {{ heading_block.settings.heading_alignment }}{% endif %}">
+  <div class="banner banner-radius {% if heading_block.settings.centered_heading %}flex {{ heading_block.settings.heading_alignment }}{% endif %}">
     {% if section.settings.banner != blank %}
       {{ section.settings.banner | image_url: width: 1440, height: 410 | image_tag: class: 'banner-image' }}
     {% endif %}
