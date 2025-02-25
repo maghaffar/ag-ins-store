@@ -72,6 +72,7 @@
                     {% else %}
                       <button
                         class="open-product-modal"
+                        type="button"
                         onclick="showProductModal()"
                         {% if product.selected_or_first_available_variant.available == false
                           or product.selected_or_first_available_variant == null
