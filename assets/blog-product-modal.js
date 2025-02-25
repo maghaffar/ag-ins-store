@@ -3,7 +3,6 @@
   const btn = document.getElementById("openModalBtn");
   const closeBtn = document.getElementById("closeModal"); 
 
-  console.log("=====>>>>>", modal,btn,)
   function openModal () {
       modal.style.display = "block";
     };
