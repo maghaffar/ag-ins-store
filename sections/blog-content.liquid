@@ -19,8 +19,8 @@
               <a class="link images" href="{{ product.url }}">
                 {{ product | image_url: width: 500 | image_tag: class: 'product-image' }}
                 {% if product.images.size > 1 %}
-                  {% assign lastProductImage = product.images | last %}
-                  {{ lastProductImage | image_url: width: 500 | image_tag: class: 'product-image product-image-2' }}
+                  {% assign last_product_image = product.images | last %}
+                  {{ last_product_image | image_url: width: 500 | image_tag: class: 'product-image product-image-2' }}
                 {% endif %}
               </a>
               <div class="align-{{ block.settings.prod-title-alignment }}">
