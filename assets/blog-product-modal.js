@@ -1,9 +1,10 @@
 // document.addEventListener("DOMContentLoaded", function () {
-  const modal = document.getElementById("productModal");
+  
   const btn = document.getElementById("openModalBtn");
   const closeBtn = document.getElementById("closeModal"); 
 
-  function openModal () {
+  function openModal (id) {
+    const modal = document.getElementById(`productModal-${id}`);
       modal.style.display = "block";
     };
   function closeModal () {
