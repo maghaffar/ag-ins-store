@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("openModalBtn");
   const closeBtn = document.getElementById("closeModal"); 
 
+  console.log("=====>>>>>", modal)
   
   if (btn && modal && closeBtn) {
     btn.onclick = function () {
