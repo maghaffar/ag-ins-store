@@ -51,22 +51,38 @@
                       class="product-variant-id"
                     >
 
-                    <button
-                      id="ProductSubmitButton-{{ section.id }}"
-                      type="submit"
-                      name="add"
-                      class="product-form__submit add-to-cart"
-                      {% if product.selected_or_first_available_variant.available == false
-                        or product.selected_or_first_available_variant == null
-                      %}
-                        disabled
-                      {% endif %}
-                    >
-                      <span id="add-to-cart-btn">
-                        {{ 'add-to-cart.svg' | inline_asset_content }}
-                      </span>
-                      {%- render 'loading-spinner' -%}
-                    </button>
+                    {% if product.variants.size > 1 %}
+                      <button
+                        id="ProductSubmitButton-{{ section.id }}"
+                        type="submit"
+                        name="add"
+                        class="product-form__submit add-to-cart"
+                        {% if product.selected_or_first_available_variant.available == false
+                          or product.selected_or_first_available_variant == null
+                        %}
+                          disabled
+                        {% endif %}
+                      >
+                        <span id="add-to-cart-btn">
+                          {{ 'add-to-cart.svg' | inline_asset_content }}
+                        </span>
+                        {%- render 'loading-spinner' -%}
+                      </button>
+                    {% else %}
+                      <button
+                        class="open-product-modal"
+
+                        {% if product.selected_or_first_available_variant.available == false
+                          or product.selected_or_first_available_variant == null
+                        %}
+                          disabled
+                        {% endif %}
+                      >
+                        <span id="add-to-cart-btn">
+                          {{ 'add-to-cart.svg' | inline_asset_content }}
+                        </span>
+                      </button>
+                    {% endif %}
                   {% endform %}
                 </product-form>
               </div>
