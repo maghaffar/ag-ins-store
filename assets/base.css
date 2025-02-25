@@ -4164,9 +4164,6 @@ details-disclosure > details {
   }
 }
 @media (max-width: 768px) {
-  .banner {
-    max-height: 190px;
-  }
   .post-heading {
     font-size: 32px;
   }
