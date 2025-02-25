@@ -1,6 +1,42 @@
 <div id="productModal" class="product-modal">
   <div class="modal-content">
     <span class="close" id="closeModal" onclick="closeModal()">&times;</span>
+
+    <h2>{{ product.title }}</h2>
+    <p>
+      <strong>{{ product.price | money }}</strong>
+    </p>
+
+    <p><strong>Color:</strong> {{ product.selected_or_first_available_variant.option1 }}</p>
+    <div class="color-options">
+      {%- for option in product.options_with_values -%}
+        {%- if option.name == 'Color' -%}
+          {%- for value in option.values -%}
+            <span
+              class="color-circle {% if product.selected_or_first_available_variant.option1 == value %}selected{% endif %}"
+              style="background-color: {{ value | handle }};"
+            ></span>
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <p><strong>Size</strong></p>
+    <div class="size-options">
+      {%- for variant in product.variants -%}
+        <button class="size-button {% if variant == product.selected_or_first_available_variant %}selected{% endif %}">
+          {{ variant.option2 }}
+        </button>
+      {%- endfor -%}
+    </div>
+
+    <p><strong>Quantity</strong></p>
+    <div class="quantity-selector">
+      <button onclick="decreaseQuantity()">-</button>
+      <input type="number" id="quantity" value="1" min="1">
+      <button onclick="increaseQuantity()">+</button>
+    </div>
+
     {%- render 'buy-buttons',
       block: block,
       product: product,
