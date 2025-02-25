@@ -1,6 +1,7 @@
 {{ 'blog-content.js' | asset_url | script_tag }}
 
 <div class="container post-content">
+  {%- assign product_form_id = 'product-form-' | append: section.id -%}
   {% for block in section.blocks %}
     {% case block.type %}
       {% when 'paragraph' %}
@@ -30,7 +31,13 @@
                   <span class="prev-price">{{ product.compare_at_price | money_without_trailing_zeros }} </span>
                   <span class="price">{{ product.price | money_without_trailing_zeros }}</span>
                 </div>
-                {% form 'product', product, novalidate: 'novalidate', class: 'form', data-type: 'add-to-cart-form' %}
+                {% form 'product',
+                  product,
+                  novalidate: 'novalidate',
+                  class: 'form',
+                  id: product_form_id,
+                  data-type: 'add-to-cart-form'
+                %}
                   <input
                     type="hidden"
                     name="id"
