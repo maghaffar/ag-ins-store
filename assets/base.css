@@ -4244,7 +4244,7 @@ details-disclosure > details {
     padding: 0 30px;
   }
   .banner-radius {
-    border-radius: 10px;
+    border-radius: 10px !important;
   }
 }
 @media (max-width: 380px) {
