@@ -89,16 +89,16 @@
                 </product-form>
               </div>
             </div>
+            {% render 'product-modal',
+              product: product,
+              product_form_id: product_form_id,
+              section_id: section.id,
+              show_pickup_availability: true
+            %}
           {% endfor %}
         </div>
     {% endcase %}
   {% endfor %}
-  {% render 'product-modal',
-    product: product,
-    product_form_id: product_form_id,
-    section_id: section.id,
-    show_pickup_availability: true
-  %}
 </div>
 {% schema %}
 {
