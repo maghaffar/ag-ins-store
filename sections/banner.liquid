@@ -21,7 +21,7 @@
         {% unless block.settings.centered_heading %}
           <h1 class="post-heading">{{ block.settings.heading }}</h1>
         {% else %}
-          <h1 class="post-heading banner-heading {{  }}">{{ block.settings.heading }}</h1>
+          <h1 class="post-heading banner-heading {{ block.settings.heading_alignment }}">{{ block.settings.heading }}</h1>
         {% endunless %}
       </div>
       {% when 'author' %}
