@@ -1,4 +1,5 @@
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 <div class="container post-content">
   {%- assign product_form_id = 'product-form-' | append: section.id -%}
@@ -71,7 +72,7 @@
                     {% else %}
                       <button
                         class="open-product-modal"
-
+                        onclick="showProductModal()"
                         {% if product.selected_or_first_available_variant.available == false
                           or product.selected_or_first_available_variant == null
                         %}
