@@ -73,7 +73,7 @@
                         class="open-product-modal"
                         id="openModalBtn"
                         type="button"
-                        onclick="openModal()"
+                        onclick="openModal({{ product.id }})"
                         {% if product.selected_or_first_available_variant.available == false
                           or product.selected_or_first_available_variant == null
                         %}
