@@ -3877,9 +3877,41 @@ details-disclosure > details {
   position: absolute;
   padding: 20px;
 }
+.top-left {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.center-left {
+  justify-content: flex-start;
+  align-items: center;
+}
+.bottom-left {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.top-center {
+  justify-content: center;
+  align-items: flex-start;
+}
 .center-center {
   justify-content: center;
   align-items: center;
+}
+.bottom-center {
+  justify-content: center;
+  align-items: flex-end;
+}
+.top-right {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.center-right {
+  justify-content: flex-end;
+  align-items: center;
+}
+.bottom-right {
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 .post-content {
   margin-top: 10px;
