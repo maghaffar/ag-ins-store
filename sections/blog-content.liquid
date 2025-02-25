@@ -62,7 +62,9 @@
                         disabled
                       {% endif %}
                     >
-                      {{ 'add-to-cart.svg' | inline_asset_content }}
+                      <span>
+                        {{ 'add-to-cart.svg' | inline_asset_content }}
+                      </span>
                       {%- render 'loading-spinner' -%}
                     </button>
                   {% endform %}
