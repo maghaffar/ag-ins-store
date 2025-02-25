@@ -147,40 +147,42 @@
     </div>
   </div>
 
-  <div class="cart-drawer">
-    <div class="sidebar-header">
-      {{ 'Your Cart' }}
-      <div class="cart-close">&times;</div>
-    </div>
-    <div class="cart-items">
-      {% if cart != empty %}
-        {% for item in cart.items %}
-          <div class="cart-drawer-item">
-            {{ item.image | image_url: width: 100 | image_tag: class: 'cart-item-image' }}
-            <div class="cart-item-details">
-              <h4>{{ item.product_title }}</h4>
-              <p>
-                <strong>{{ item.final_line_price | money }}</strong>
-              </p>
-              {% if item.options_with_values != empty %}
-                {% for option in item.options_with_values %}
-                  <p>{{ option.name }} : {{ option.value }}</p>
-                {% endfor %}
-              {% endif %}
-              <div class="cart-drawer-item-quantity">
-                <button class="decrease-qty" data-key="{{ item.key }}">-</button>
-                <span>{{ item.quantity }}</span>
-                <button class="increase-qty" data-key="{{ item.key }}">+</button>
+  <!--
+    <div class="cart-drawer">
+      <div class="sidebar-header">
+        {{ 'Your Cart' }}
+        <div class="cart-close">&times;</div>
+      </div>
+      <div class="cart-items">
+        {% if cart != empty %}
+          {% for item in cart.items %}
+            <div class="cart-drawer-item">
+              {{ item.image | image_url: width: 100 | image_tag: class: 'cart-item-image' }}
+              <div class="cart-item-details">
+                <h4>{{ item.product_title }}</h4>
+                <p>
+                  <strong>{{ item.final_line_price | money }}</strong>
+                </p>
+                {% if item.options_with_values != empty %}
+                  {% for option in item.options_with_values %}
+                    <p>{{ option.name }} : {{ option.value }}</p>
+                  {% endfor %}
+                {% endif %}
+                <div class="cart-drawer-item-quantity">
+                  <button class="decrease-qty" data-key="{{ item.key }}">-</button>
+                  <span>{{ item.quantity }}</span>
+                  <button class="increase-qty" data-key="{{ item.key }}">+</button>
+                </div>
               </div>
+              <button class="remove-item" data-key="{{ item.key }}">×</button>
             </div>
-            <button class="remove-item" data-key="{{ item.key }}">×</button>
-          </div>
-        {% endfor %}
-      {% else %}
-        {{ 'CART EMPTY' }}
-      {% endif %}
+          {% endfor %}
+        {% else %}
+          {{ 'CART EMPTY' }}
+        {% endif %}
+      </div>
     </div>
-  </div>
+  -->
 </div>
 
 {% schema %}
