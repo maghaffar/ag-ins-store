@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
  
-var modal = document.getElementById("productModal");
+const modal = document.getElementById("productModal");
 
 
-var btn = document.getElementById("openModalBtn");
+const btn = document.getElementById("openModalBtn");
 
 
-var close = document.getElementById("closeModal");
+const close = document.getElementById("closeModal");
 
 
 btn.onclick = function() {
