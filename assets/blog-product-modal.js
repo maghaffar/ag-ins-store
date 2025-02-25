@@ -1,4 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function () {
+
   
   const btn = document.getElementById("openModalBtn");
   const closeBtn = document.getElementById("closeModal"); 
@@ -12,13 +12,4 @@
       modal.style.display = "none";
     };
   
-  // if (btn && modal && closeBtn) {
-    
-
-  //   window.onclick = function (event) {
-  //     if (event.target === modal) {
-  //       modal.style.display = "none";
-  //     }
-  //   };
-  // }
-// });
+ 
