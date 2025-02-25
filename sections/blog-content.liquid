@@ -42,17 +42,12 @@
                     {% endif %}
                     class="product-variant-id"
                   >
-                  <!--
-                    <button class="add-to-cart" id="addToCart">
-                      {{ 'add-to-cart.svg' | inline_asset_content }}
-                      {%- render 'loading-spinner' -%}
-                    </button>
-                  -->
+
                   <button
                     id="ProductSubmitButton-{{ section.id }}"
                     type="submit"
                     name="add"
-                    class="product-form__submit button button--full-width button--primary"
+                    class="add-to-cart"
                     {% if product.selected_or_first_available_variant.available == false
                       or product.selected_or_first_available_variant == null
                     %}
