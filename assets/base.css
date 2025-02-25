@@ -3863,10 +3863,12 @@ details-disclosure > details {
   display: flex;
   gap: 10px;
 }
+.flex {
+  display: flex;
+}
 .banner {
   overflow: hidden;
   position: relative;
-  display: flex;
 }
 .banner-image {
   width: 100%;
