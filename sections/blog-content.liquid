@@ -30,7 +30,7 @@
                   <span class="prev-price">{{ product.compare_at_price | money_without_trailing_zeros }} </span>
                   <span class="price">{{ product.price | money_without_trailing_zeros }}</span>
                 </div>
-                {% form 'product', product %}
+                {% form 'product', product, novalidate: 'novalidate' %}
                   <input
                     type="hidden"
                     name="id"
@@ -54,7 +54,6 @@
                     name="add"
                     class="product-form__submit button button--full-width button--primary"
                     {% if product.selected_or_first_available_variant.available == false
-                      or quantity_rule_soldout
                       or product.selected_or_first_available_variant == null
                     %}
                       disabled
