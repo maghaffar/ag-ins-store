@@ -4058,6 +4058,7 @@ details-disclosure > details {
   border: 1px solid #888;
   width: 80%;
   display: flex;
+  gap: 50px;
 }
 .close {
   color: #aaa;
