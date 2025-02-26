@@ -4065,6 +4065,7 @@ details-disclosure > details {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  max-width: 5%;
 }
 
 .close:hover,
