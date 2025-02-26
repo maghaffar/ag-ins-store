@@ -1,6 +1,6 @@
 <div id="productModal-{{ product.id }}" class="product-modal">
-  <span class="close" id="closeModal" onclick="closeModal({{ product.id }})">&times;</span>
   <div class="modal-content">
+    <span class="close" id="closeModal" onclick="closeModal({{ product.id }})">&times;</span>
     <div class="product-image images">
       {{ product | image_url: width: 300 | image_tag: class: 'product-image' }}
       {% if product.images.size > 1 %}
