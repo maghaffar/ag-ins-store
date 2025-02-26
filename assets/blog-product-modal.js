@@ -14,7 +14,7 @@
 function addToCart() {
   let formData = {
  'items': [{
-  'id': 50224037134615,
+  'id': 49085172908311,
   'quantity': 2
   }]
 };
