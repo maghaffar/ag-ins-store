@@ -4057,8 +4057,6 @@ details-disclosure > details {
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
-  display: flex;
-  gap: 50px;
 }
 .close {
   color: #aaa;
@@ -4073,6 +4071,10 @@ details-disclosure > details {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+.modal-product {
+  display: flex;
+  gap: 50px;
 }
 
 .section-heading {
