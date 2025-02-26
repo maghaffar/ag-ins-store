@@ -143,11 +143,15 @@
       {%- endif -%}
     </div>
 
-    {%- render 'buy-buttons',
-      product: product,
-      product_form_id: product_form_id,
-      section_id: section.id,
-      show_pickup_availability: true
-    -%}
+    <button onclick="addToCart()">Add to Cart</button>
+
+    <!--
+      {%- render 'buy-buttons',
+        product: product,
+        product_form_id: product_form_id,
+        section_id: section.id,
+        show_pickup_availability: true
+      -%}
+    -->
   </div>
 </div>
