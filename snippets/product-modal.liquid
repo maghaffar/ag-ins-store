@@ -1,7 +1,13 @@
 <div id="productModal-{{ product.id }}" class="product-modal">
   <span class="close" id="closeModal" onclick="closeModal({{ product.id }})">&times;</span>
   <div class="modal-content">
-    <div class="product-image"></div>
+    <div class="product-image images">
+      {{ product | image_url: width: 500 | image_tag: class: 'product-image' }}
+      {% if product.images.size > 1 %}
+        {% assign last_product_image = product.images | last %}
+        {{ last_product_image | image_url: width: 500 | image_tag: class: 'product-image product-image-2' }}
+      {% endif %}
+    </div>
     <div class="product-details">
       <h2>{{ product.title }}</h2>
       <p>
