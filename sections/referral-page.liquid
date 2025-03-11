@@ -1,6 +1,621 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<style>
+   .ref-image-wrapper {
+     background-image: url({{ section.settings.ref_image_wrapper | img_url:'master' }});
+     background-size: cover;
+     min-height: 645px;
+     max-height: max-content;
+     background-repeat: no-repeat;
+     background-position: left bottom;
+     position: relative;
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-start;
+     border-radius: 40px;
+   }
+
+   @media only screen and (max-width: 798px) {
+     .ref-image-wrapper {
+       background-image: none;
+       background: #A0D1E2;
+       border-bottom-right-radius: 0;
+       border-bottom-left-radius: 0;
+       min-height: unset;
+     }
+   }
+
+   .form-step {
+     display: none;
+   }
+
+   .form-step.active {
+     display: block;
+   }
+
+   input[type="email"],
+   textarea,
+   input[type="text"] {
+     width: 100%;
+     padding: 10px;
+     margin: 5px 0;
+     border: 1px solid #fff;
+     border-radius: 5px;
+     font-size: 10px;
+   }
+
+   textarea {
+     resize: none;
+     min-height: 114px;
+     color: #000000;
+     font-size: 10px;
+     line-height: 15px;
+     border-radius: 5px;
+     font-weight: 400;
+     margin-bottom: 0;
+   }
+    .error{
+      color: red;
+      font-style: italic;
+    }
+   .link-container input[type="text"] {
+     flex: 1;
+     margin-right: 6px;
+     color: #fff;
+     background: #3894C1;
+     border: none;
+     padding: 10px 20px;
+   }
+
+   .referral_form_container {
+     max-width: 960px;
+     margin: 0 auto;
+     padding: 100px 20px;
+   }
+
+   .step-by-step-form> .form-header {
+     text-align: center;
+     padding-top: 70px;
+     padding-right: 90px;
+   }
+
+   .form-header> .cus-ref-heading {
+     font-family: 'Welcome-Drama';
+     font-size: 41px;
+     line-height: 39px;
+     font-weight: 400;
+     color: #fff;
+   }
+
+   .form-header> .cus-small-heading {
+     color: #3894C1;
+     font-family: 'GothamBold';
+     font-size: 20px;
+     line-height: 40px;
+     margin-top: 10px;
+   }
+
+   .form-header> .cus-small-text {
+     color: #3894C1;
+     font-size: 15px;
+     line-height: 20px;
+     max-width: 280px;
+     margin: 0 auto;
+     margin-top: 6px;
+   }
+
+   .step-by-step-form {
+     position: relative;
+     width: 44%;
+   }
+
+   .step-by-step-form> svg {
+     position: absolute;
+     top: -65px;
+     right: 10px;
+   }
+
+   .custom-multi-step-form {
+     padding: 20px;
+     padding-right: 55px;
+     padding-left: 0;
+   }
+
+   .form-padding {
+     padding-top: 120px;
+   }
+
+   .step-first-text {
+     color: #000000;
+     font-size: 10px;
+     line-height: 24px;
+     font-weight: 400;
+     font-family: 'GothamBook';
+   }
+
+   .first-step-label {
+     color: #000000;
+     font-size: 9px;
+     line-height: 30px;
+     font-weight: 400;
+   }
+
+   .next-step-cta {
+     background: #EDBC51;
+     border: none;
+     color: #000000;
+     border-radius: 10px;
+     width: 100%;
+     max-width: 222px;
+     padding: 20px;
+     margin: 0 auto;
+     display: block;
+     font-family: 'GothamMedium';
+     cursor:pointer;
+     font-size: 15px;
+   }
+
+   .custom-radio-check {
+     display: flex;
+     align-items: center;
+     gap: 5px;
+   }
+
+   .mb-50px {
+     margin-bottom: 50px;
+   }
+
+   .custom-radio-cta {
+     appearance: none;
+     width: 22px;
+     height: 22px;
+     border-radius: 50%;
+     vertical-align: middle;
+     position: relative;
+     cursor: pointer;
+     outline: 0;
+     overflow: hidden;
+   }
+
+   .custom-radio-cta:after {
+     position: absolute;
+     content: "";
+     top: 50%;
+     left: 50%;
+     border-radius: 50%;
+     transition: all .1s;
+   }
+
+   .custom-radio-cta {
+     border: 3px solid #fff;
+   }
+
+   .custom-radio-cta:after {
+     border: 5px solid #FFF;
+     transform: translate3d(50%, 50%, 0);
+   }
+
+   .custom-radio-cta:checked:after {
+     transform: translate3d(-50%, -50%, 0);
+   }
+
+   .small-share-text {
+     color: #000000;
+     font-size: 10px;
+     line-height: 30px;
+     font-family: 'GothamMedium';
+     margin-right: 5px;
+   }
+
+   .copy-cta {
+     font-family: 'GothamMedium';
+     color: #3894C1;
+     font-size: 10px;
+     line-height: 20px;
+     border-radius: 5px;
+     border: none;
+     padding: 5px 16px;
+     cursor: pointer;
+   }
+
+   .link-container {
+     display: flex;
+     align-items: center;
+   }
+
+   .form-padding-1 {
+     padding-top: 20px;
+   }
+
+   .step-2-cta-spacing {
+     margin-top: 15px;
+     margin-bottom: 15px;
+     cursor:pointer;
+   }
+
+   .last-step-text {
+     font-size: 15px;
+     color: #000;
+     font-weight: 400;
+     line-height: 23px;
+     max-width: 273px;
+     margin: 0 auto;
+     margin-bottom: 10px;
+   }
+
+   .form-padding-2 {
+     text-align: center;
+     padding-top: 65px;
+   }
+
+   .step-3-cta-spacing {
+     margin-top: 40px;
+     margin-bottom: 40px;
+   }
+
+   .thanks-text {
+     font-size: 80px !important;
+     text-transform: uppercase;
+   }
+
+   .mobile-image-only {
+     display: none;
+   }
+
+   .small-reward-text-mobile {
+     display: none;
+   }
+
+   @media only screen and (max-width: 798px) {
+  .mobile-image-only {
+     display: block;
+    position: relative;
+   }
+
+   .step-by-step-form {
+     width: 100%;
+   }
+
+   .mobile-image-only> .img {
+     display: block;
+     margin-top: -1px;
+     width: 100%;
+   }
+
+   .step-by-step-form> svg {
+     right: 0px;
+     max-width: 100%;
+   }
+
+   .step-by-step-form> .form-header {
+     padding: 0;
+     padding-top: 64px;
+   }
+
+     .form-header> .cus-ref-heading {
+       font-size: 30px;
+       line-height: 100%;
+   }
+
+   .form-header> .cus-small-heading {
+       font-size: 18px;
+       line-height: 20px;
+       font-family: 'GothamMedium';
+       max-width: 150px;
+       margin: 0 auto;
+       margin-top: 22px;
+   }
+
+   .form-header> .cus-small-text {
+       font-size: 15px;
+       line-height: 20px;
+       margin-top: 25px;
+   }
+
+
+   .custom-multi-step-form {
+     padding: 0 15px;
+   }
+
+   .form-padding {
+     padding-top: 20px;
+   }
+
+   .referral_form_container {
+     padding-top: 40px;
+   }
+
+   .step-first-text {
+     margin-bottom: 8px;
+   }
+
+   .custom-radio-check {
+     margin: 10px 0;
+     gap: 15px;
+   }
+
+   .thanks-text {
+     font-size: 60px !important;
+   }
+
+   .hide-on-mobile {
+    display: none;
+   }
+
+   .link-container {
+     position: absolute;
+     bottom: 0;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+   }
+
+   .copy-code {
+     display: flex;
+     width: 100%;
+     padding: 0 30px;
+     padding-bottom: 10px;
+     gap: 6px;
+   }
+
+   .link-container input[type="text"] {
+     margin: 0;
+   }
+
+   .copy-cta {
+     min-width: 78px;
+     display: block;
+   }
+
+   .small-reward-text-mobile {
+     display: block;
+     font-size: 10px;
+     line-height: 24px;
+     color: #000;
+     margin: 5px 0;
+   }
+
+   .form-padding-2 {
+     padding-top: 40px;
+   }
+
+   .step-3-cta-spacing {
+     margin-bottom: 0;
+   }
+
+   .step-2-cta-spacing {
+     margin: 0 auto;
+   }
+   }
+
+
+
+   @media only screen and (max-width: 798px) and (min-width: 480px) {
+   .link-container {
+     margin-bottom: 20px;
+     padding: 0 20px;
+   }
+
+   .referral_form_container {
+     padding-top: 60px;
+   }
+
+   .step-by-step-form> svg {
+     top: 23%;
+     left: 50%;
+     -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+   }
+   }
+</style>
+
+<div class="referral_form_container">
+  <div class="ref-image-wrapper ">
+    <div class="step-by-step-form">
+      {% render 'referral-form-svg' %}
+      <header class="form-header">
+        <h2 class="cus-ref-heading">GIVE 50% GET $20</h2>
+        <p class="cus-small-heading">For every friend you refer!</p>
+        <p class="cus-small-text">Your friends get 50% Off their first purchase and YOU EARN $20</p>
+      </header>
+
+      <!-- Multi-Step Form -->
+      <form id="regForm">
+        <div class="custom-multi-step-form">
+          <!-- Step 1 -->
+          <div id="step-1" class="form-step active form-padding">
+            <h2 class="step-first-text">Enter the email where you would like to receive your rewards:</h2>
+            <input type="email" id="reward-email" name="reward-email" placeholder="Your email" required>
+            <p class="error" id="error"></p>
+            <label class="custom-radio-check mb-50px">
+              <input class="custom-radio-cta" type="radio" name="newsletter" checked>
+              <span class="radio-label first-step-label">Sign up for Nextrition emails.</span>
+            </label>
+            <button type="button" class="next-step-cta" onclick="getReferralLink()">START SHARING</button>
+          </div>
+
+          <!-- Step 2 -->
+          <div id="step-2" class="form-step form-padding-1">
+            <p class="small-reward-text-mobile">Enter the email where you would like to receive your rewards:</p>
+            <input
+              type="email"
+              id="referral-emails"
+              name="referral-emails"
+              placeholder="To (separate multiple emails by commas)"
+              required
+            >
+            <input type="email" id="your-email" name="your-email" placeholder="Your email" readonly>
+            <textarea
+              id="referral-message"
+              name="referral-message">Hey! I wanted to share one of my favorite dog foods, Nextrition. Because I referred you, you'll get 50% off your first order of $30 or more when you use my link. Nextrition is a cold-pressed dog food which means it is similar in the nutrition of a raw diet but with the convenience of kibble. My dog loves it!</textarea>
+            <label class="custom-radio-check">
+              <input class="custom-radio-cta" type="radio" name="newsletter" checked>
+              <span class="radio-label first-step-label">Sign up for Nextrition emails.</span>
+            </label>
+            <p class="error" id="send-error"></p>
+            <button type="submit" class="next-step-cta step-2-cta-spacing" onclick="sendReferralLink(event)">
+              START SHARING
+            </button>
+            <div class="link-container hide-on-mobile">
+              <span class="small-share-text">Or share your link:</span>
+              <input type="text" id="referral-link" readonly>
+              <button type="button" class="copy-cta" onclick="copyLink()">Copy</button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div id="step-3" class="form-step form-padding-2">
+            <p class="last-step-text">You are on track to earn $20 off at Nextrition!</p>
+            <p class="last-step-text">
+              Once your friend's qualified order is delivered, you'll get a $20 gift card in your inbox.
+            </p>
+            <p class="last-step-text">Don't stop there! Keep earning rewards - refer more friends!</p>
+            <button type="submit" class="next-step-cta step-3-cta-spacing">START SHARING</button>
+            <div class="link-container hide-on-mobile">
+              <span class="small-share-text">Or share your link:</span>
+              <input type="text" id="success-link" readonly>
+              <button type="button" class="copy-cta" onclick="copyLink()">Copy</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="mobile-image-only">
+    <img class="img" src="{{ section.settings.ref_image_wrapper_mobile | img_url: 'master' }}">
+    <div class="link-container">
+      <span class="small-share-text">Or share your link:</span>
+      <div class="copy-code">
+        <input type="text" id="success-link" value="http://ref.nextrition.com/tse" readonly>
+        <button type="button" class="copy-cta" onclick="copyLink()">Copy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function nextStep(step) {
+    document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
+    document.getElementById(`step-${step}`).classList.add('active');
   }
+
+  async function getReferralLink(){
+        let emailInput = document.getElementById("reward-email").value;
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if(!emailRegex.test(emailInput)){
+          document.getElementById("error").innerText = "Please enter valid email address.";
+          return;
+        }
+        try {
+            let response = await fetch("https://42d5-144-48-133-17.ngrok-free.app/api/referralLink/getReferralLink", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ emailInput, customerEmail: "{{ customer.email }}" }),
+            });
+
+            let data = await response.json();
+            if(data?.error){
+             document.getElementById("error").innerText = data.error;
+              return
+            }
+          else if(data?.data?.status == 405){
+            document.getElementById("error").innerText = data?.data?.message
+              return
+          }
+            firstName = data?.first_name;
+            lastName = data?.last_name;
+            email = data?.email;
+            referralLink = data?.referral_link;
+
+            document.getElementById("your-email").value = email;
+            document.getElementById("referral-link").value = referralLink;
+
+            if(!referralLink) {
+              document.getElementById("error").innerText = "Something went wrong. Please try again"
+              return
+            }
+            nextStep(2);
+        } catch (error) {
+            console.error("Error:", error);
+        }
+  }
+
+  async function sendReferralLink(e){
+      e.preventDefault();
+    
+        let referreesEmailInput = document.getElementById("referral-emails").value;
+        let message = document.getElementById("referral-message").value;
+        let referralLink = document.getElementById("referral-link").value;
+        const referralEmail = document.getElementById("your-email").value;
+
+        if(!referreesEmailInput){
+          document.getElementById("send-error").innerText = "Please enter the referral emails."
+          return;
+        }
+        // Convert comma-separated emails into an array
+        let referreesEmail;
+        if (referreesEmailInput?.includes(",")){
+          referreesEmail =  referreesEmailInput.split(",").map(email => email.trim());
+        }
+        else {
+          referreesEmail = [referreesEmailInput]
+        }
+
+        try {
+            let response = await fetch("https://42d5-144-48-133-17.ngrok-free.app/api/referralLink/sendReferralLink", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    referreesEmail,
+                    referralLink,
+                  referralEmail,
+                    first_name: firstName,
+                    last_name: lastName,
+                    message,
+                }),
+            });
+
+            let result = await response.json();
+            if(result?.error){
+              document.getElementById("send-error").innerText = result?.error;
+                return;
+            }
+
+            
+            nextStep(3);
+           document.querySelector('.cus-ref-heading').textContent = "Thanks";
+           document.querySelector('.cus-small-heading').textContent = "For sharing Nextrition!";
+           document.querySelector('.cus-small-text').style.display = 'none';
+           document.querySelector('.cus-ref-heading').classList.add('thanks-text');
+        } catch (error) {
+            console.error("Error:", error);
+        }
+  }
+
+  function handleStep2(event) {
+    event.preventDefault();
+    const email1 = document.getElementById('referral-emails').value;
+    const email2 = document.getElementById('your-email').value;
+    const message = document.getElementById('referral-message').value;
+    
+    if (email1 && email2 && message) {
+      nextStep(3);
+      document.querySelector('.cus-ref-heading').textContent = "Thanks";
+      document.querySelector('.cus-small-heading').textContent = "For sharing Nextrition!";
+      document.querySelector('.cus-small-text').style.display = 'none';
+      document.querySelector('.cus-ref-heading').classList.add('thanks-text');
+    }
+  }
+
+  function copyLink() {
+    const copyText = document.getElementById("referral-link");
+    copyText.select();
+    document.execCommand("copy");
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Referral Form",
+
+}
 {% endschema %}
