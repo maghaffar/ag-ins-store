@@ -159,6 +159,15 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "1513306175528008036": {
+        "type": "shopify://apps/shipping-rates-calc/blocks/app-embed-calculator-product/7c9e47cf-8b08-44b7-8b23-4584e9b2a043",
+        "disabled": false,
+        "settings": {
+          "buttons_additional_css_class": ""
+        }
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
