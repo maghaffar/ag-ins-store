@@ -176,6 +176,13 @@
         "type": "shopify://apps/tawk-to-live-chat/blocks/widget-embed-code/91169e75-f163-40ce-90e0-9059f3c9b772",
         "disabled": false,
         "settings": {}
+      },
+      "18200565304124502559": {
+        "type": "shopify://apps/alpha-sale/blocks/bar-block/45a35b3f-4683-44a8-afc3-1d6788fea377",
+        "disabled": false,
+        "settings": {
+          "demo": false
+        }
       }
     },
     "color_schemes": {
