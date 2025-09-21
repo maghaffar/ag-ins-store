@@ -39,7 +39,7 @@
             "button_text": "Shop Now",
             "button_url": "shopify://collections/men",
             "content_position": "bottom-center",
-            "content_backdrop": 0
+            "content_backdrop": 3
           }
         }
       },
