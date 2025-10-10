@@ -9,6 +9,23 @@
  */
 {
   "sections": {
+    "1760076212e76bf8e3": {
+      "type": "apps",
+      "blocks": {
+        "essential_countdown_timer_app_block_TRDEQQ": {
+          "type": "shopify://apps/essential-countdown-timer/blocks/app-block/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
+          "settings": {
+            "id": "cmgj1xkge006ndrkqamsyxsqd"
+          }
+        }
+      },
+      "block_order": [
+        "essential_countdown_timer_app_block_TRDEQQ"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "banner_section_wfh3UH": {
       "type": "banner-section",
       "blocks": {
@@ -138,6 +155,7 @@
     }
   },
   "order": [
+    "1760076212e76bf8e3",
     "banner_section_wfh3UH",
     "image_banner",
     "featured_collection",
