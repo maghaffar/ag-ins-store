@@ -170,17 +170,6 @@
         "disabled": false,
         "settings": {}
       },
-      "5803399549441092565": {
-        "type": "shopify://apps/multi-location-inv/blocks/app-embed/982328e1-99f7-4a7e-8266-6aed71bf0021",
-        "disabled": false,
-        "settings": {
-          "syncLoad": true,
-          "collectionMapping": false,
-          "customerTagMapping": false,
-          "collectionPages": false,
-          "legacyApis": false
-        }
-      },
       "9137299313046473183": {
         "type": "shopify://apps/regios-discounts/blocks/regios_discounts_embed/dc1514bb-4830-4102-bffa-e8b300bac5bd",
         "disabled": true,
@@ -205,6 +194,17 @@
         "type": "shopify://apps/multi-location-stock-info/blocks/app_embed/7746d7fa-0a6b-4d82-aef7-c6caf8dc1f4b",
         "disabled": false,
         "settings": {}
+      },
+      "5803399549441092565": {
+        "type": "shopify://apps/multi-location-inv/blocks/app-embed/982328e1-99f7-4a7e-8266-6aed71bf0021",
+        "disabled": true,
+        "settings": {
+          "syncLoad": true,
+          "collectionMapping": false,
+          "customerTagMapping": false,
+          "collectionPages": false,
+          "legacyApis": false
+        }
       }
     },
     "color_schemes": {
