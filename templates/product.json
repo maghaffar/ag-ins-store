@@ -87,37 +87,6 @@
         "padding_bottom": 12
       }
     },
-    "1750414068fffb08fa": {
-      "type": "apps",
-      "blocks": {
-        "shipping_rates_calc_calculator_exzdBz": {
-          "type": "shopify://apps/shipping-rates-calc/blocks/calculator/7c9e47cf-8b08-44b7-8b23-4584e9b2a043",
-          "settings": {
-            "calculator_background_color": "#334fb4",
-            "open_link_font_size": 16,
-            "open_link_bold": false,
-            "open_link_italic": false,
-            "open_link_underline": false,
-            "open_link_text_color": "#ffffff",
-            "open_link_text_color_hover": "#121212",
-            "introduction_text_font_size": 14,
-            "introduction_text_color": "#121212",
-            "buttons_background_color": "#ffffff",
-            "buttons_background_color_hover": "#121212",
-            "buttons_font_size": 15,
-            "buttons_text_color": "#121212",
-            "buttons_text_color_hover": "#ffffff",
-            "buttons_additional_css_class": ""
-          }
-        }
-      },
-      "block_order": [
-        "shipping_rates_calc_calculator_exzdBz"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -139,7 +108,6 @@
   },
   "order": [
     "main",
-    "1750414068fffb08fa",
     "related-products"
   ]
 }
