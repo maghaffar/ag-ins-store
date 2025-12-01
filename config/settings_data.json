@@ -208,6 +208,17 @@
         "type": "shopify://apps/essential-countdown-timer/blocks/app_embed/722378e8-5a70-4eae-aa89-9e44e8e9f6de",
         "disabled": false,
         "settings": {}
+      },
+      "5803399549441092565": {
+        "type": "shopify://apps/multi-location-inv/blocks/app-embed/982328e1-99f7-4a7e-8266-6aed71bf0021",
+        "disabled": false,
+        "settings": {
+          "syncLoad": true,
+          "collectionMapping": false,
+          "customerTagMapping": false,
+          "collectionPages": false,
+          "legacyApis": false
+        }
       }
     },
     "color_schemes": {
