@@ -27,6 +27,10 @@
           "type": "price",
           "settings": {}
         },
+        "multi_location_inv_location_inventory_zpYLXE": {
+          "type": "shopify://apps/multi-location-inv/blocks/location-inventory/982328e1-99f7-4a7e-8266-6aed71bf0021",
+          "settings": {}
+        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -60,6 +64,7 @@
         "vendor",
         "title",
         "price",
+        "multi_location_inv_location_inventory_zpYLXE",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
@@ -97,11 +102,11 @@
             "open_link_text_color_hover": "#121212",
             "introduction_text_font_size": 14,
             "introduction_text_color": "#121212",
-            "buttons_background_color": "#FFFFFF",
+            "buttons_background_color": "#ffffff",
             "buttons_background_color_hover": "#121212",
             "buttons_font_size": 15,
             "buttons_text_color": "#121212",
-            "buttons_text_color_hover": "#FFFFFF",
+            "buttons_text_color_hover": "#ffffff",
             "buttons_additional_css_class": ""
           }
         }
