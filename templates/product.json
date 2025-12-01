@@ -27,10 +27,6 @@
           "type": "price",
           "settings": {}
         },
-        "multi_location_inv_location_inventory_zpYLXE": {
-          "type": "shopify://apps/multi-location-inv/blocks/location-inventory/982328e1-99f7-4a7e-8266-6aed71bf0021",
-          "settings": {}
-        },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
@@ -40,6 +36,10 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
+          "settings": {}
+        },
+        "multi_location_inv_location_inventory_jdF4Jt": {
+          "type": "shopify://apps/multi-location-inv/blocks/location-inventory/982328e1-99f7-4a7e-8266-6aed71bf0021",
           "settings": {}
         },
         "buy_buttons": {
@@ -64,9 +64,9 @@
         "vendor",
         "title",
         "price",
-        "multi_location_inv_location_inventory_zpYLXE",
         "variant_picker",
         "quantity_selector",
+        "multi_location_inv_location_inventory_jdF4Jt",
         "buy_buttons",
         "description",
         "share"
