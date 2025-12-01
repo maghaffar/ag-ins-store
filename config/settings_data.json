@@ -181,13 +181,6 @@
           "legacyApis": false
         }
       },
-      "18200565304124502559": {
-        "type": "shopify://apps/alpha-sale/blocks/bar-block/45a35b3f-4683-44a8-afc3-1d6788fea377",
-        "disabled": true,
-        "settings": {
-          "demo": false
-        }
-      },
       "9137299313046473183": {
         "type": "shopify://apps/regios-discounts/blocks/regios_discounts_embed/dc1514bb-4830-4102-bffa-e8b300bac5bd",
         "disabled": true,
@@ -208,17 +201,10 @@
           "feature_flags": ""
         }
       },
-      "9365423049038898845": {
-        "type": "shopify://apps/tawk-to-live-chat/blocks/widget-embed-code/91169e75-f163-40ce-90e0-9059f3c9b772",
-        "disabled": true,
+      "7669108132792546251": {
+        "type": "shopify://apps/multi-location-stock-info/blocks/app_embed/7746d7fa-0a6b-4d82-aef7-c6caf8dc1f4b",
+        "disabled": false,
         "settings": {}
-      },
-      "1513306175528008036": {
-        "type": "shopify://apps/shipping-rates-calc/blocks/app-embed-calculator-product/7c9e47cf-8b08-44b7-8b23-4584e9b2a043",
-        "disabled": true,
-        "settings": {
-          "buttons_additional_css_class": ""
-        }
       }
     },
     "color_schemes": {
