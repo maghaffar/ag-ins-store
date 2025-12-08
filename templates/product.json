@@ -74,6 +74,10 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "sc_back_in_stock_app_block_JUH7Hf": {
+          "type": "shopify://apps/sc-back-in-stock/blocks/app-block/839cbcb7-0406-4c2b-8e74-a54d987b90ab",
+          "settings": {}
         }
       },
       "block_order": [
@@ -85,7 +89,8 @@
         "multi_location_stock_info_star_rating_7QYpMh",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "sc_back_in_stock_app_block_JUH7Hf"
       ],
       "settings": {
         "enable_sticky_info": true,
