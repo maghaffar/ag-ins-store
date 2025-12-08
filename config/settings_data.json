@@ -218,7 +218,7 @@
       },
       "4599381594862710133": {
         "type": "shopify://apps/notim/blocks/app-embed/ce956955-2f3f-4a66-96d2-8c88d6e6cd48",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     },
