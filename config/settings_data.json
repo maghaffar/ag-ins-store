@@ -215,6 +215,11 @@
         "type": "shopify://apps/notify-me/blocks/app-embed/b399b727-6c85-44fc-9e21-63114bd72054",
         "disabled": true,
         "settings": {}
+      },
+      "4599381594862710133": {
+        "type": "shopify://apps/notim/blocks/app-embed/ce956955-2f3f-4a66-96d2-8c88d6e6cd48",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
