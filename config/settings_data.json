@@ -209,6 +209,23 @@
         "type": "shopify://apps/multi-location-stock-info/blocks/app_embed/7746d7fa-0a6b-4d82-aef7-c6caf8dc1f4b",
         "disabled": false,
         "settings": {}
+      },
+      "5059203847231188605": {
+        "type": "shopify://apps/smart-filter-search/blocks/app-embed/5cc1944c-3014-4a2a-af40-7d65abc0ef73",
+        "disabled": false,
+        "settings": {
+          "productGridSelector": "",
+          "useCustomQuickviewTemplate": false,
+          "customJs": "",
+          "customCss": "",
+          "customProductTemplateLoader": "",
+          "customTreeTemplateLoader": "",
+          "customSortTemplateLoader": "",
+          "customSearchTemplateLoader": "",
+          "customPaginationTemplateLoader": "",
+          "customYMMTemplateLoader": "",
+          "themeInfo": "{{theme.id}}"
+        }
       }
     },
     "color_schemes": {
